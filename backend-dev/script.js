@@ -79,11 +79,21 @@ function renderCart(){
   orderTotal.textContent = String(cart.length).padStart(2, '0');
 }
 
+function showStamp(anchorEl){
+  const host = anchorEl.closest('.project-card, section') || anchorEl.parentElement;
+  const stamp = document.createElement('span');
+  stamp.className = 'stamp-mark';
+  stamp.textContent = 'AÑADIDO';
+  host.appendChild(stamp);
+  setTimeout(() => stamp.remove(), 1350);
+}
+
 document.querySelectorAll('[data-cart-item]').forEach(btn => {
   btn.addEventListener('click', () => {
     const item = btn.dataset.cartItem;
     if(!cart.includes(item)){
       cart.push(item);
+      showStamp(btn);
       if(btn.classList.contains('add-btn')){
         btn.textContent = '✓ Añadido';
         btn.classList.add('added');

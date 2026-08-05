@@ -159,7 +159,7 @@ a{color:inherit;text-decoration:none;}
 }
 
 /* sections generic */
-section{max-width:var(--max);margin:0 auto;padding:3.2rem clamp(1.2rem,4vw,3rem);}
+section{max-width:var(--max);margin:0 auto;padding:3.2rem clamp(1.2rem,4vw,3rem);position:relative;}
 
 /* ficha */
 .ficha-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:3rem;}
@@ -192,6 +192,7 @@ section{max-width:var(--max);margin:0 auto;padding:3.2rem clamp(1.2rem,4vw,3rem)
 /* projects */
 .project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;}
 .project-card{
+  position:relative;
   background:var(--paper-raised);border:1px solid var(--line);border-radius:var(--radius);
   padding:1.6rem;display:flex;flex-direction:column;gap:.9rem;
   opacity:0;transform:translateY(22px);transition:opacity .5s ease,transform .5s ease;
@@ -252,7 +253,26 @@ section{max-width:var(--max);margin:0 auto;padding:3.2rem clamp(1.2rem,4vw,3rem)
   outline:2px solid var(--register);outline-offset:2px;
 }
 
-/* footer */
+/* stamp */
+.stamp-mark{
+  position:absolute;top:1rem;right:1rem;z-index:6;pointer-events:none;
+  border:3px double var(--stamp);color:var(--stamp);
+  font-family:var(--mono);font-weight:800;font-size:.72rem;letter-spacing:.1em;
+  padding:.3rem .6rem;border-radius:4px;
+  animation:stampHit .5s cubic-bezier(.2,1.4,.4,1) forwards,stampFade .35s ease .95s forwards;
+}
+@keyframes stampHit{
+  0%{transform:rotate(-12deg) scale(2.2);opacity:0;}
+  55%{transform:rotate(-12deg) scale(.9);opacity:1;}
+  100%{transform:rotate(-12deg) scale(1);opacity:1;}
+}
+@keyframes stampFade{to{opacity:0;}}
+
+/* qr block */
+.qr-block{display:flex;gap:1rem;align-items:center;margin-top:1.6rem;}
+.qr-block img{border:1px solid var(--line);border-radius:2px;background:var(--paper);}
+.qr-caption{font-family:var(--mono);font-size:.7rem;color:var(--ink-soft);max-width:11rem;}
+
 .footer{
   text-align:center;padding:2.4rem 1.2rem 3rem;
   font-family:var(--mono);font-size:.75rem;color:var(--ink-soft);
