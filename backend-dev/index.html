@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mateo Velasco — Desarrollador Backend</title>
+<meta name="description" content="Mateo Velasco, desarrollador backend especializado en APIs, autenticación y arquitectura: PHP, Apache y sistemas de acceso.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+
+<header class="topbar">
+  <a href="#inicio" class="brand">
+    <span class="brand-mark">MV</span>
+    <span class="brand-stamp">ALMACÉN °02</span>
+  </a>
+  <nav class="nav">
+    <a href="../" class="nav-back">← Catálogo</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#proceso">Proceso</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+  <button class="cart-btn" id="cartBtn" aria-label="Abrir carrito">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.6L21 8H6"/><circle cx="10" cy="21" r="1"/><circle cx="18" cy="21" r="1"/></svg>
+    <span class="cart-count" id="cartCount">0</span>
+  </button>
+</header>
+
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-drawer-head">
+    <span>TU CARRITO</span>
+    <button id="cartClose" aria-label="Cerrar carrito">✕</button>
+  </div>
+  <ul class="cart-list" id="cartList"></ul>
+  <p class="cart-empty" id="cartEmpty">Aún no añadiste nada. Explora los proyectos y habilidades.</p>
+  <a href="#contacto" class="cart-checkout" id="cartCheckout">Ir a checkout →</a>
+</aside>
+<div class="cart-overlay" id="cartOverlay"></div>
+
+<main>
+
+<section class="hero" id="inicio">
+  <div class="hero-inner">
+    <p class="eyebrow">RECIBO N.º 002 — DESARROLLADOR BACKEND</p>
+    <h1 class="hero-title" id="typeTarget"></h1>
+    <p class="hero-sub">Desarrollador backend enfocado en APIs, autenticación y arquitecturas que sostienen negocio real. Con base en La Paz, Bolivia.</p>
+    <div class="hero-actions">
+      <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
+      <a href="#habilidades" class="btn btn-ghost">Ver habilidades</a>
+    </div>
+  </div>
+  <div class="barcode" aria-hidden="true">
+    <div class="barcode-bars"></div>
+    <span class="barcode-code">MATEOVELASCO · 2026 · BACKEND</span>
+  </div>
+</section>
+
+<div class="tear"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+
+<section class="ficha" id="ficha">
+  <p class="eyebrow">FICHA DEL PRODUCTO</p>
+  <div class="ficha-grid">
+    <p class="ficha-bio">Construyo APIs en PHP que sostienen catálogos, accesos y automatizaciones para negocios reales: autenticación por sesión, tokens con revocación automática e integraciones externas como WhatsApp Cloud API. Me interesa tanto resolver el problema de negocio como el código que resiste producción — rutas, permisos y casos límite.</p>
+    <dl class="ficha-specs">
+      <div><dt>Ubicación</dt><dd>La Paz, Bolivia</dd></div>
+      <div><dt>Enfoque</dt><dd>APIs & arquitectura backend</dd></div>
+      <div><dt>Stack</dt><dd>PHP · Apache · REST · Sesiones</dd></div>
+      <div><dt>También</dt><dd>Diseño de problemas algorítmicos</dd></div>
+    </dl>
+  </div>
+</section>
+
+<div class="tear"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+
+<section class="skills" id="habilidades">
+  <p class="eyebrow">HABILIDADES</p>
+  <div class="skills-table">
+    <div class="skills-row skills-head">
+      <span>Nivel</span>
+      <span>Artículo</span>
+      <span class="skills-note-head">Nota</span>
+    </div>
+    <div class="skills-row" data-fill="90">
+      <span class="dots"><i></i><i></i><i></i><i></i><i></i></span>
+      <span class="skill-name">PHP (APIs REST)</span>
+      <span class="skill-note">Catálogos, autenticación, integraciones</span>
+    </div>
+    <div class="skills-row" data-fill="88">
+      <span class="dots"><i></i><i></i><i></i><i></i><i></i></span>
+      <span class="skill-name">Autenticación & control de acceso</span>
+      <span class="skill-note">Sesiones, tokens por cliente, revocación automática</span>
+    </div>
+    <div class="skills-row" data-fill="85">
+      <span class="dots"><i></i><i></i><i></i><i></i><i></i></span>
+      <span class="skill-name">Arquitectura & despliegue con Apache</span>
+      <span class="skill-note">mod_rewrite, .htaccess, rutas bajo subcarpetas</span>
+    </div>
+    <div class="skills-row" data-fill="80">
+      <span class="dots"><i></i><i></i><i></i><i></i><i></i></span>
+      <span class="skill-name">WhatsApp Cloud API</span>
+      <span class="skill-note">Integraciones nativas, sin dependencias externas</span>
+    </div>
+    <div class="skills-row" data-fill="95">
+      <span class="dots"><i></i><i></i><i></i><i></i><i></i></span>
+      <span class="skill-name">Algoritmos & estructuras de datos</span>
+      <span class="skill-note">Diseño de problemas para Codeforces</span>
+    </div>
+    <div class="skills-row" data-fill="70">
+      <span class="dots"><i></i><i></i><i></i><i></i><i></i></span>
+      <span class="skill-name">Evaluación de modelos de IA</span>
+      <span class="skill-note">Etiquetado de datos con Labelbox</span>
+    </div>
+    <div class="skills-row" data-fill="75">
+      <span class="dots"><i></i><i></i><i></i><i></i><i></i></span>
+      <span class="skill-name">Astro + Tailwind (frontend de apoyo)</span>
+      <span class="skill-note">Cuando el backend necesita una cara</span>
+    </div>
+  </div>
+  <button class="btn btn-ghost skills-add" data-cart-item="Habilidades backend">+ Añadir habilidades al carrito</button>
+</section>
+
+<div class="tear"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+
+<section class="projects" id="proyectos">
+  <p class="eyebrow">PROYECTOS</p>
+  <div class="project-grid">
+
+    <article class="project-card featured">
+      <span class="project-tag">PROYECTO INSIGNIA</span>
+      <h3>Inbolsa Neo — Backend & accesos</h3>
+      <p>API en PHP para un fabricante boliviano de empaques industriales, integrada bajo el mismo dominio que el frontend para evitar CORS. Incluye autenticación por sesión, un sistema de acceso a catálogo por código QR con tokens independientes por cliente y revocación automática, panel admin para gestión de QRs, y chatbot nativo por WhatsApp Cloud API.</p>
+      <ul class="project-chips">
+        <li>PHP</li><li>Auth por sesión</li><li>Tokens QR</li><li>Apache/.htaccess</li><li>WhatsApp API</li>
+      </ul>
+      <button class="btn btn-primary add-btn" data-cart-item="Inbolsa Neo — Backend">Añadir al carrito</button>
+    </article>
+
+    <article class="project-card">
+      <span class="project-tag">DISEÑO ALGORÍTMICO</span>
+      <h3>Chromatic Chains — Codeforces</h3>
+      <p>Problema original para Codeforces sobre coloreo de arreglos, combinando optimización greedy y estructuras de datos. Diseñar un problema exige pensar en cada caso límite antes de que el sistema lo haga por ti.</p>
+      <ul class="project-chips">
+        <li>Algoritmos</li><li>Estructuras de datos</li><li>Greedy</li>
+      </ul>
+      <button class="btn btn-primary add-btn" data-cart-item="Chromatic Chains">Añadir al carrito</button>
+    </article>
+
+    <article class="project-card">
+      <span class="project-tag">EXPLORACIÓN</span>
+      <h3>Evaluación de IA & etiquetado</h3>
+      <p>Trabajo con plataformas de etiquetado de datos como Labelbox e interés activo en metodologías de testing y evaluación de modelos de IA — la misma disciplina que aplico para que una tienda no falle en producción.</p>
+      <ul class="project-chips">
+        <li>Labelbox</li><li>QA de modelos</li><li>Data labeling</li>
+      </ul>
+      <button class="btn btn-primary add-btn" data-cart-item="Evaluación de IA">Añadir al carrito</button>
+    </article>
+
+  </div>
+</section>
+
+<div class="tear"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+
+<section class="process" id="proceso">
+  <p class="eyebrow">CÓMO SE ARMA EL PEDIDO</p>
+  <ol class="process-list">
+    <li><span class="process-n">01</span><div><h4>Diagnóstico</h4><p>Entender el negocio antes de tocar código.</p></div></li>
+    <li><span class="process-n">02</span><div><h4>Diseño</h4><p>Sistemas visuales que venden, no solo que decoran.</p></div></li>
+    <li><span class="process-n">03</span><div><h4>Desarrollo</h4><p>APIs, autenticación y rutas: código que se puede mantener.</p></div></li>
+    <li><span class="process-n">04</span><div><h4>Lanzamiento & soporte</h4><p>Despliegue, monitoreo y ajustes post-venta.</p></div></li>
+  </ol>
+</section>
+
+<div class="tear"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+
+<section class="checkout" id="contacto">
+  <p class="eyebrow">FINALIZAR PEDIDO</p>
+  <div class="checkout-grid">
+
+    <div class="order-summary">
+      <h3>Resumen del carrito</h3>
+      <ul class="order-list" id="orderList"></ul>
+      <p class="order-empty" id="orderEmpty">Tu carrito está vacío — añade un proyecto o una habilidad arriba.</p>
+      <div class="order-total">
+        <span>Total de artículos</span>
+        <span id="orderTotal">0</span>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:mateovelascop19@gmail.com">mateovelascop19@gmail.com</a>
+        <a href="https://github.com/JMateoVelascoAuza" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/mateo-velasco-48256620b/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+
+    <form class="checkout-form" id="checkoutForm">
+      <label>Nombre<input type="text" name="nombre" required></label>
+      <label>Email<input type="email" name="email" required></label>
+      <label>Mensaje<textarea name="mensaje" rows="4" required></textarea></label>
+      <button type="submit" class="btn btn-primary btn-block">Enviar pedido</button>
+    </form>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="barcode small" aria-hidden="true"><div class="barcode-bars"></div></div>
+  <p>© 2026 Mateo Velasco — hecho a mano, sin plantillas.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
