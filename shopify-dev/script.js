@@ -119,5 +119,5 @@ checkoutForm.addEventListener('submit', (e) => {
   const body = encodeURIComponent(
     `Nombre: ${nombre}\nEmail: ${email}\n\nMensaje:\n${mensaje}\n\nCarrito: ${itemsLine}`
   );
-  window.location.href = `mailto:tu-email@ejemplo.com?subject=${subject}&body=${body}`;
+  window.location.href = `mailto:mateovelascop19@gmail.com?subject=${subject}&body=${body}`;
 });
