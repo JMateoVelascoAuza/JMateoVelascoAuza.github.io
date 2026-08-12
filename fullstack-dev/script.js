@@ -1,5 +1,5 @@
 const cart = [];
-let currentLang = 'es';
+let currentLang = 'en';
 
 const i18n = {
   es: {
@@ -8,7 +8,7 @@ const i18n = {
     skillName2: 'PHP (APIs de backend)',
     skillName3: 'Arquitectura & despliegue',
     skillName4: 'WhatsApp Cloud API',
-    skillName5: 'Shopify Liquid & Themes',
+    skillName5: 'Production web patterns',
     skillName6: 'Algoritmos & estructuras de datos',
     skillName7: 'Evaluación de modelos de IA',
     chipAuthQR: 'Auth QR',
@@ -29,7 +29,7 @@ const i18n = {
     cartEmptyMsg: 'Aún no añadiste nada. Explora los proyectos y habilidades.',
     cartCheckoutLink: 'Ir a checkout →',
     fichaEyebrow: 'FICHA DEL PRODUCTO',
-    fichaBio: 'Diseño y construyo productos web completos: desde frontends en Astro y Tailwind hasta backends en PHP que sostienen catálogos, accesos y automatizaciones reales — con experiencia puntual en e-commerce y Shopify Liquid. Me obsesiona que cada clic tenga una razón de negocio detrás.',
+    fichaBio: 'Diseño y construyo productos web completos: desde frontends en Astro y Tailwind hasta backends en PHP que sostienen catálogos, accesos y automatizaciones reales — con experiencia puntual en web products y production web. Me obsesiona que cada clic tenga una razón de negocio detrás.',
     specLoc: 'Ubicación', specFocus: 'Enfoque', specFocusVal: 'Producto & arquitectura full-stack',
     specStack: 'Stack', specAlso: 'También', specAlsoVal: 'Diseño de problemas algorítmicos',
     specEdu: 'Formación', specEduVal: 'Ing. de Sistemas — Universidad Privada Boliviana (en curso)',
@@ -48,13 +48,18 @@ const i18n = {
     skillsAddBtn: '+ Añadir habilidades al carrito',
     projectsEyebrow: 'PROYECTOS',
     projTag1: 'PROYECTO INSIGNIA',
-    projTitle1: 'Plataforma de e-commerce industrial',
+    projTitle1: 'Plataforma de web products industrial',
     projDesc1: 'Sitio para un fabricante boliviano de sacos de polipropileno tejido y empaques industriales. Frontend en Astro + Tailwind, backend en PHP bajo un mismo dominio para evitar CORS, chatbot nativo por WhatsApp Cloud API y un sistema de acceso a catálogo por código QR con tokens y revocación automática.',
     projTag2: 'DISEÑO ALGORÍTMICO',
     projDesc2: 'Problema original para Codeforces sobre coloreo de arreglos, combinando optimización greedy y estructuras de datos. Diseñar un problema exige pensar en cada caso límite antes de que el sistema lo haga por ti.',
     projTag3: 'EXPLORACIÓN',
     projTitle3: 'Evaluación de IA & etiquetado',
     projDesc3: 'Trabajo con plataformas de etiquetado de datos como Labelbox e interés activo en metodologías de testing y evaluación de modelos de IA — la misma disciplina que aplico para que un producto no falle en producción.',
+    specFocusVal: 'Full-stack product & architecture',
+    projTitle2: 'Appointment Platform',
+    projTag4: 'INDEPENDENT BUILD',
+    projTitle4: 'Finance Dashboard',
+    projDesc4: 'Personal finance product concept covering transactions, categories, budgets and monthly reporting, with a focus on useful data visualization and responsive UX.',
     addToCartBtn: 'Añadir al carrito',
     addedBtn: '✓ Añadido',
     stampText: 'AÑADIDO',
@@ -79,7 +84,7 @@ const i18n = {
     skillName2: 'PHP (backend APIs)',
     skillName3: 'Architecture & deployment',
     skillName4: 'WhatsApp Cloud API',
-    skillName5: 'Shopify Liquid & Themes',
+    skillName5: 'API design & integrations',
     skillName6: 'Algorithms & data structures',
     skillName7: 'AI model evaluation',
     chipAuthQR: 'QR Auth',
@@ -100,7 +105,7 @@ const i18n = {
     cartEmptyMsg: "You haven't added anything yet. Explore the projects and skills.",
     cartCheckoutLink: 'Go to checkout →',
     fichaEyebrow: 'PRODUCT SHEET',
-    fichaBio: 'I design and build complete web products: frontends in Astro and Tailwind, backends in PHP that power catalogs, access control and real automations — with hands-on experience in e-commerce and Shopify Liquid. I care that every click has a business reason behind it.',
+    fichaBio: 'I design and build complete web products: frontends in Astro and Tailwind, backends in PHP that power catalogs, access control and real automations — with hands-on experience in web products and production web. I care that every click has a business reason behind it.',
     specLoc: 'Location', specFocus: 'Focus', specFocusVal: 'Full-stack product & architecture',
     specStack: 'Stack', specAlso: 'Also', specAlsoVal: 'Algorithmic problem design',
     specEdu: 'Education', specEduVal: 'Systems Engineering — Universidad Privada Boliviana (in progress)',
@@ -110,7 +115,7 @@ const i18n = {
     skillNote2: 'Catalogs, authentication, integrations',
     skillNote3: 'From local XAMPP to production hosting',
     skillNote4: 'Native chatbots, no external dependencies',
-    skillNote5: 'Custom templates, when the project calls for it',
+    skillNote5: 'Clear service boundaries and external integrations',
     skillNote6: 'Designing problems for Codeforces',
     skillNote7: 'Data labeling with Labelbox',
     skillName8: 'React & Angular', skillNote8: 'Component-based interfaces',
@@ -119,13 +124,13 @@ const i18n = {
     skillsAddBtn: '+ Add skills to cart',
     projectsEyebrow: 'PROJECTS',
     projTag1: 'FLAGSHIP PROJECT',
-    projTitle1: 'Industrial e-commerce platform',
-    projDesc1: 'Site for a Bolivian manufacturer of woven polypropylene bags and industrial packaging. Astro + Tailwind frontend, PHP backend under the same domain to avoid CORS, a native WhatsApp Cloud API chatbot, and a QR-based catalog access system with tokens and automatic revocation.',
-    projTag2: 'ALGORITHMIC DESIGN',
-    projDesc2: 'Original Codeforces problem about array coloring, combining greedy optimization and data structures. Designing a problem means thinking through every edge case before the system does.',
-    projTag3: 'EXPLORATION',
-    projTitle3: 'AI evaluation & data labeling',
-    projDesc3: "I work with data labeling platforms like Labelbox and have an active interest in AI testing and evaluation methods — the same discipline I apply so a product doesn't fail in production.",
+    projTitle1: 'Operations Hub',
+    projDesc1: 'Independent full-stack product concept for managing teams, projects, tasks, clients and operational activity from one workspace. Built to demonstrate authentication, role-based access, dashboards, API boundaries and database relationships.',
+    projTag2: 'PRODUCT PLATFORM',
+    projDesc2: 'Booking flow from service selection to confirmation, with availability rules, customer accounts, admin management and notification-ready architecture.',
+    projTag3: 'REAL-TIME SYSTEM',
+    projTitle3: 'Project Workspace',
+    projDesc3: 'Collaborative project management workspace with tasks, comments, activity history and real-time updates. Designed around shared state and clear interaction feedback.',
     addToCartBtn: 'Add to cart',
     addedBtn: '✓ Added',
     stampText: 'ADDED',
@@ -189,12 +194,14 @@ function applyLang(lang){
   renderCart();
 }
 
+applyLang('en');
+
 langToggle.addEventListener('click', () => {
   const next = currentLang === 'es' ? 'en' : 'es';
   applyLang(next);
 });
 
-setHeroTitle('es', true);
+setHeroTitle('en', true);
 
 document.querySelectorAll('.skills-row[data-fill]').forEach(row => {
   const fill = Number(row.dataset.fill);

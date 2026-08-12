@@ -1,5 +1,5 @@
 const cart = [];
-let currentLang = 'es';
+let currentLang = 'en';
 
 const i18n = {
   es: {
@@ -52,19 +52,24 @@ const i18n = {
     conceptsIntro: 'Tres direcciones visuales distintas para el mismo tipo de problema: una landing. Sin cliente real detrás — son ejercicios de estética y sistema, construidos en HTML/CSS puro.',
     concept1Title: 'SaaS minimalista',
     concept1Desc: ' — tipografía grande, mucho blanco, un solo acento de color.',
-    concept2Title: 'E-commerce vibrante',
+    concept2Title: 'Web products vibrante',
     concept2Desc: ' — color saturado, grilla de producto, botones grandes y directos.',
     concept3Title: 'Portfolio oscuro',
     concept3Desc: ' — dark mode, monoespaciada, acento único tipo terminal.',
     projectsEyebrow: 'PROYECTOS',
     projTag1: 'PROYECTO INSIGNIA',
-    projTitle1: 'Frontend & UI para e-commerce industrial',
+    projTitle1: 'Frontend & UI para web products industrial',
     projDesc1: 'Rediseño integral de interfaz para un fabricante boliviano de empaques industriales: animaciones dinámicas, efectos hover, elementos interactivos y una experiencia de acceso a catálogo propia, construida en Astro + Tailwind sobre un backend real.',
     projTag2: 'SISTEMA DE INTERACCIÓN',
     projTitle2: 'Este mismo portafolio',
     projDesc2: 'El catálogo y los portafolios que estás viendo ahora son en sí mismos una pieza de UX: un carrito funcional que conecta habilidades y proyectos con el contacto final, sellos animados y un sistema visual construido desde cero, sin librerías de UI.',
     projTag3: 'DISEÑO ALGORÍTMICO',
     projDesc3: 'Problema original para Codeforces sobre coloreo de arreglos, combinando optimización greedy y estructuras de datos. Diseñar un problema exige pensar en cada caso límite antes de que el sistema lo haga por ti.',
+    specFocusVal: 'UX/UI & interaction',
+    projTitle3: 'Booking Experience',
+    projTag4: 'DESIGN SYSTEM',
+    projTitle4: 'MV Interface System',
+    projDesc4: 'Reusable visual system covering typography, spacing, buttons, forms, tables, alerts, cards and responsive states. Built to keep interfaces consistent without flattening their personality.',
     addToCartBtn: 'Añadir al carrito',
     addedBtn: '✓ Añadido',
     stampText: 'AÑADIDO',
@@ -133,19 +138,19 @@ const i18n = {
     conceptsIntro: "Three different visual directions for the same kind of problem: a landing page. No real client behind them — these are exercises in aesthetics and systems, built in plain HTML/CSS.",
     concept1Title: 'Minimal SaaS',
     concept1Desc: ' — large type, lots of white space, a single color accent.',
-    concept2Title: 'Vibrant e-commerce',
+    concept2Title: 'Vibrant web products',
     concept2Desc: ' — saturated color, product grid, big direct buttons.',
     concept3Title: 'Dark portfolio',
     concept3Desc: ' — dark mode, monospaced, a single terminal-style accent.',
     projectsEyebrow: 'PROJECTS',
     projTag1: 'FLAGSHIP PROJECT',
-    projTitle1: 'Frontend & UI for industrial e-commerce',
-    projDesc1: 'Full interface redesign for a Bolivian industrial packaging manufacturer: dynamic animations, hover effects, interactive elements and a custom catalog access experience, built in Astro + Tailwind on top of a real backend.',
-    projTag2: 'INTERACTION SYSTEM',
-    projTitle2: 'This very portfolio',
-    projDesc2: "The catalog and the portfolios you're looking at right now are a piece of UX in themselves: a working cart that connects skills and projects to the final contact step, animated stamps, and a visual system built from scratch, with no UI libraries.",
-    projTag3: 'ALGORITHMIC DESIGN',
-    projDesc3: 'Original Codeforces problem about array coloring, combining greedy optimization and data structures. Designing a problem means thinking through every edge case before the system does.',
+    projTitle1: 'Analytics Dashboard',
+    projDesc1: 'SaaS dashboard concept focused on information hierarchy: overview, analytics, customers, reports and settings. Includes loading, empty, error and success states rather than only the ideal path.',
+    projTag2: 'DEVELOPER EXPERIENCE',
+    projTitle2: 'Developer Platform',
+    projDesc2: 'Interface for managing API projects, keys, endpoints, usage and request logs. The design treats technical information as a product experience instead of a wall of documentation.',
+    projTag3: 'UX FLOW',
+    projDesc3: 'Responsive booking flow from service selection to confirmation, designed around progressive disclosure, clear availability states and mobile-first interaction.',
     addToCartBtn: 'Add to cart',
     addedBtn: '✓ Added',
     stampText: 'ADDED',
@@ -209,12 +214,14 @@ function applyLang(lang){
   renderCart();
 }
 
+applyLang('en');
+
 langToggle.addEventListener('click', () => {
   const next = currentLang === 'es' ? 'en' : 'es';
   applyLang(next);
 });
 
-setHeroTitle('es', true);
+setHeroTitle('en', true);
 
 document.querySelectorAll('.skills-row[data-fill]').forEach(row => {
   const fill = Number(row.dataset.fill);

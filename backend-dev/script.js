@@ -1,5 +1,5 @@
 const cart = [];
-let currentLang = 'es';
+let currentLang = 'en';
 
 const i18n = {
   es: {
@@ -48,13 +48,18 @@ const i18n = {
     skillsAddBtn: '+ Añadir habilidades al carrito',
     projectsEyebrow: 'PROYECTOS',
     projTag1: 'PROYECTO INSIGNIA',
-    projTitle1: 'Backend & accesos para e-commerce industrial',
+    projTitle1: 'Backend & accesos para web products industrial',
     projDesc1: 'API en PHP para un fabricante boliviano de empaques industriales, integrada bajo el mismo dominio que el frontend para evitar CORS. Incluye autenticación por sesión, un sistema de acceso a catálogo por código QR con tokens independientes por cliente y revocación automática, panel admin para gestión de QRs, y chatbot nativo por WhatsApp Cloud API.',
     projTag2: 'DISEÑO ALGORÍTMICO',
     projDesc2: 'Problema original para Codeforces sobre coloreo de arreglos, combinando optimización greedy y estructuras de datos. Diseñar un problema exige pensar en cada caso límite antes de que el sistema lo haga por ti.',
     projTag3: 'EXPLORACIÓN',
     projTitle3: 'Evaluación de IA & etiquetado',
     projDesc3: 'Trabajo con plataformas de etiquetado de datos como Labelbox e interés activo en metodologías de testing y evaluación de modelos de IA — la misma disciplina que aplico para que un backend no falle en producción.',
+    specFocusVal: 'APIs & backend architecture',
+    projTitle2: 'Inventory API',
+    projTag4: 'DATA PIPELINE',
+    projTitle4: 'Data Import Service',
+    projDesc4: 'Import pipeline for structured business data with validation, duplicate detection, transformation rules and clear failure reporting instead of silent partial imports.',
     addToCartBtn: 'Añadir al carrito',
     addedBtn: '✓ Añadido',
     stampText: 'AÑADIDO',
@@ -119,13 +124,13 @@ const i18n = {
     skillsAddBtn: '+ Add skills to cart',
     projectsEyebrow: 'PROJECTS',
     projTag1: 'FLAGSHIP PROJECT',
-    projTitle1: 'Backend & access control for industrial e-commerce',
-    projDesc1: 'PHP API for a Bolivian industrial packaging manufacturer, integrated under the same domain as the frontend to avoid CORS. Includes session-based authentication, a QR-based catalog access system with per-client tokens and automatic revocation, an admin panel for QR management, and a native WhatsApp Cloud API chatbot.',
-    projTag2: 'ALGORITHMIC DESIGN',
-    projDesc2: 'Original Codeforces problem about array coloring, combining greedy optimization and data structures. Designing a problem means thinking through every edge case before the system does.',
-    projTag3: 'EXPLORATION',
-    projTitle3: 'AI evaluation & data labeling',
-    projDesc3: "I work with data labeling platforms like Labelbox and have an active interest in AI testing and evaluation methods — the same discipline I apply so a backend doesn't fail in production.",
+    projTitle1: 'Identity API',
+    projDesc1: 'Independent authentication service concept with registration, login, refresh tokens, protected resources, role-based access control and audit-ready events. The goal is a backend that treats security and failure states as first-class concerns.',
+    projTag2: 'DATA SERVICE',
+    projDesc2: 'REST API for products, categories, stock movements and orders, designed with validation, pagination, filtering, relational data and consistent error responses.',
+    projTag3: 'OBSERVABILITY',
+    projTitle3: 'Audit Log API',
+    projDesc3: 'Backend service that records security and business events with actor, action, timestamp and context. Includes filtering and a query-friendly structure for operational debugging.',
     addToCartBtn: 'Add to cart',
     addedBtn: '✓ Added',
     stampText: 'ADDED',
@@ -189,12 +194,14 @@ function applyLang(lang){
   renderCart();
 }
 
+applyLang('en');
+
 langToggle.addEventListener('click', () => {
   const next = currentLang === 'es' ? 'en' : 'es';
   applyLang(next);
 });
 
-setHeroTitle('es', true);
+setHeroTitle('en', true);
 
 document.querySelectorAll('.skills-row[data-fill]').forEach(row => {
   const fill = Number(row.dataset.fill);

@@ -1,36 +1,40 @@
-let currentLang = 'es';
+let currentLang = 'en';
 
 const i18n = {
   es: {
     brandStamp: 'CATÁLOGO',
     eyebrow: 'ÍNDICE DE PRODUCTOS',
-    title: 'Un portafolio distinto para cada pedido.',
-    subtitle: 'Mateo Velasco — desarrollador full-stack. Cada versión de este catálogo está afinada para un tipo de rol distinto.',
-    stockCount: '3 PRODUCTOS EN CATÁLOGO · TODOS DISPONIBLES',
+    title: 'Un portafolio distinto para cada tipo de rol.',
+    subtitle: 'Mateo Velasco — desarrollador full-stack. Un catálogo de productos pensado para mostrar cómo diseño, construyo y envío software.',
+    stockCount: '4 PRODUCTOS EN CATÁLOGO · TODOS DISPONIBLES',
     available: 'DISPONIBLE',
     viewPortfolio: 'Ver portafolio →',
-    card1Title: 'Full-Stack Developer',
-    card1Desc: 'Productos web completos: Astro, PHP, APIs y arquitectura, con experiencia puntual en e-commerce y Shopify.',
-    card2Title: 'Backend Developer',
-    card2Desc: 'APIs en PHP, autenticación por sesión, control de acceso con tokens y arquitectura de despliegue.',
-    card3Title: 'UX/UI & Frontend',
-    card3Desc: 'Sistemas de diseño con Astro y Tailwind, microinteracciones y jerarquía visual. Este mismo catálogo es parte del portafolio.',
+    card1Title: 'Full-Stack',
+    card1Desc: 'Productos web completos que combinan interfaces, APIs, bases de datos, autenticación y arquitectura orientada a producción.',
+    card2Title: 'Backend & APIs',
+    card2Desc: 'APIs, autenticación, modelado de datos, integraciones y servicios diseñados alrededor de límites claros y manejo de errores.',
+    card3Title: 'Frontend / UX',
+    card3Desc: 'Interfaces responsivas, sistemas de diseño, dashboards y patrones de interacción construidos para claridad, velocidad y accesibilidad.',
+    card4Title: 'Systems Lab',
+    card4Desc: 'Experimentos de arquitectura: gateways, colas, webhooks, workers, flujos en tiempo real y productos con IA.',
     footerTag: '© 2026 Mateo Velasco — hecho a mano, sin plantillas.',
   },
   en: {
     brandStamp: 'CATALOG',
     eyebrow: 'PRODUCT INDEX',
-    title: 'A different portfolio for every request.',
-    subtitle: 'Mateo Velasco — full-stack developer. Each version of this catalog is tuned for a different kind of role.',
-    stockCount: '3 PRODUCTS IN CATALOG · ALL AVAILABLE',
+    title: 'A different portfolio for every kind of role.',
+    subtitle: 'Mateo Velasco — full-stack developer. A product catalog built to show how I design, build and ship software.',
+    stockCount: '4 PRODUCTS IN CATALOG · ALL AVAILABLE',
     available: 'AVAILABLE',
     viewPortfolio: 'View portfolio →',
-    card1Title: 'Full-Stack Developer',
-    card1Desc: 'Complete web products: Astro, PHP, APIs and architecture, with hands-on experience in e-commerce and Shopify.',
-    card2Title: 'Backend Developer',
-    card2Desc: 'PHP APIs, session-based authentication, token-based access control and deployment architecture.',
-    card3Title: 'UX/UI & Frontend',
-    card3Desc: 'Design systems with Astro and Tailwind, microinteractions and visual hierarchy. This very catalog is part of the portfolio.',
+    card1Title: 'Full-Stack',
+    card1Desc: 'End-to-end web products combining interfaces, APIs, databases, authentication and production-minded architecture.',
+    card2Title: 'Backend & APIs',
+    card2Desc: 'Reliable APIs, authentication, data modeling, integrations and services built around failure handling and clear boundaries.',
+    card3Title: 'Frontend / UX',
+    card3Desc: 'Responsive interfaces, design systems, dashboards and interaction patterns built for clarity, speed and accessibility.',
+    card4Title: 'Systems Lab',
+    card4Desc: 'Architecture experiments: gateways, queues, webhooks, background workers, realtime flows and AI-enabled products.',
     footerTag: '© 2026 Mateo Velasco — handcrafted, no templates.',
   }
 };
@@ -46,6 +50,8 @@ function applyLang(lang){
   });
   langToggle.textContent = lang === 'es' ? 'EN' : 'ES';
 }
+
+applyLang('en');
 
 langToggle.addEventListener('click', () => {
   applyLang(currentLang === 'es' ? 'en' : 'es');

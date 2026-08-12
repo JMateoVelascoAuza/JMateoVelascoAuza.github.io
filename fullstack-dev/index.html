@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mateo Velasco — Full-Stack Developer</title>
-<meta name="description" content="Mateo Velasco, desarrollador full-stack: Astro, Tailwind, PHP y APIs, con experiencia en e-commerce y Shopify Liquid.">
+<meta name="description" content="Mateo Velasco, desarrollador full-stack: Astro, Tailwind, PHP y APIs, con experiencia en web products y production web.">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Mateo Velasco — Full-Stack Developer">
-<meta property="og:description" content="Astro, Tailwind, PHP y APIs para productos reales, con e-commerce y automatizaciones.">
+<meta property="og:description" content="Astro, Tailwind, PHP y APIs para productos reales, con web products y automatizaciones.">
 <meta property="og:image" content="https://jmateovelascoauza.github.io/og-image.png">
 <meta property="og:url" content="https://jmateovelascoauza.github.io/fullstack-dev/">
 <meta name="twitter:card" content="summary_large_image">
@@ -28,12 +28,12 @@
   </a>
   <nav class="nav">
     <a href="../" class="nav-back" data-i18n="navBack">← Catálogo</a>
-    <a href="#proyectos" data-i18n="navProjects">Proyectos</a>
-    <a href="#habilidades" data-i18n="navSkills">Habilidades</a>
-    <a href="#proceso" data-i18n="navProcess">Proceso</a>
-    <a href="#contacto" data-i18n="navContact">Contacto</a>
+    <a href="#proyectos" data-i18n="navProjects">Projects</a>
+    <a href="#habilidades" data-i18n="navSkills">Skills</a>
+    <a href="#proceso" data-i18n="navProcess">Process</a>
+    <a href="#contacto" data-i18n="navContact">Contact</a>
   </nav>
-  <button class="cart-btn" id="cartBtn" aria-label="Abrir carrito">
+  <button class="cart-btn" id="cartBtn" aria-label="Open cart">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.6L21 8H6"/><circle cx="10" cy="21" r="1"/><circle cx="18" cy="21" r="1"/></svg>
     <span class="cart-count" id="cartCount">0</span>
   </button>
@@ -42,12 +42,12 @@
 
 <aside class="cart-drawer" id="cartDrawer">
   <div class="cart-drawer-head">
-    <span data-i18n="cartTitle">TU CARRITO</span>
-    <button id="cartClose" aria-label="Cerrar carrito">✕</button>
+    <span data-i18n="cartTitle">YOUR CART</span>
+    <button id="cartClose" aria-label="Close cart">✕</button>
   </div>
   <ul class="cart-list" id="cartList"></ul>
   <p class="cart-empty" id="cartEmpty" data-i18n="cartEmptyMsg">Aún no añadiste nada. Explora los proyectos y habilidades.</p>
-  <a href="#contacto" class="cart-checkout" id="cartCheckout" data-i18n="cartCheckoutLink">Ir a checkout →</a>
+  <a href="#contacto" class="cart-checkout" id="cartCheckout" data-i18n="cartCheckoutLink">Go to checkout →</a>
 </aside>
 <div class="cart-overlay" id="cartOverlay"></div>
 
@@ -55,12 +55,12 @@
 
 <section class="hero" id="inicio">
   <div class="hero-inner">
-    <p class="eyebrow" data-i18n="heroEyebrow">RECIBO N.º 001 — DESARROLLADOR FULL-STACK</p>
+    <p class="eyebrow" data-i18n="heroEyebrow">RECEIPT N.º 001 — DEVELOPER FULL-STACK</p>
     <h1 class="hero-title" id="typeTarget"></h1>
-    <p class="hero-sub" data-i18n="heroSub">Desarrollador full-stack enfocado en productos reales: APIs, frontends y arquitecturas que se sostienen en producción. Con base en La Paz, Bolivia.</p>
+    <p class="hero-sub" data-i18n="heroSub">Developer full-stack enfocado en productos reales: APIs, frontends y arquitecturas que se sostienen en producción. Con base en La Paz, Bolivia.</p>
     <div class="hero-actions">
-      <a href="#proyectos" class="btn btn-primary" data-i18n="btnSeeProjects">Ver proyectos</a>
-      <a href="#habilidades" class="btn btn-ghost" data-i18n="btnSeeSkills">Ver habilidades</a>
+      <a href="#proyectos" class="btn btn-primary" data-i18n="btnSeeProjects">View projects</a>
+      <a href="#habilidades" class="btn btn-ghost" data-i18n="btnSeeSkills">View skills</a>
     </div>
   </div>
   <div class="barcode" aria-hidden="true">
@@ -72,15 +72,15 @@
 <div class="tear"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
 
 <section class="ficha" id="ficha">
-  <p class="eyebrow" data-i18n="fichaEyebrow">FICHA DEL PRODUCTO</p>
+  <p class="eyebrow" data-i18n="fichaEyebrow">PRODUCT SHEET</p>
   <div class="ficha-grid">
-    <p class="ficha-bio" data-i18n="fichaBio">Diseño y construyo productos web completos: desde frontends en Astro y Tailwind hasta backends en PHP que sostienen catálogos, accesos y automatizaciones reales — con experiencia puntual en e-commerce y Shopify Liquid. Me obsesiona que cada clic tenga una razón de negocio detrás.</p>
+    <p class="ficha-bio" data-i18n="fichaBio">Diseño y construyo productos web completos: desde frontends en Astro y Tailwind hasta backends en PHP que sostienen catálogos, accesos y automatizaciones reales — con experiencia puntual en web products y production web. Me obsesiona que cada clic tenga una razón de negocio detrás.</p>
     <dl class="ficha-specs">
-      <div><dt data-i18n="specLoc">Ubicación</dt><dd>La Paz, Bolivia</dd></div>
-      <div><dt data-i18n="specFocus">Enfoque</dt><dd data-i18n="specFocusVal">Producto & arquitectura full-stack</dd></div>
+      <div><dt data-i18n="specLoc">Location</dt><dd>La Paz, Bolivia</dd></div>
+      <div><dt data-i18n="specFocus">Focus</dt><dd data-i18n="specFocusVal">Producto & arquitectura full-stack</dd></div>
       <div><dt data-i18n="specStack">Stack</dt><dd>Astro · React · Angular · PHP</dd></div>
-      <div><dt data-i18n="specEdu">Formación</dt><dd data-i18n="specEduVal">Ing. de Sistemas — Universidad Privada Boliviana (en curso)</dd></div>
-      <div><dt data-i18n="specAlso">También</dt><dd data-i18n="specAlsoVal">Diseño de problemas algorítmicos</dd></div>
+      <div><dt data-i18n="specEdu">Education</dt><dd data-i18n="specEduVal">Ing. de Sistemas — Universidad Privada Boliviana (en curso)</dd></div>
+      <div><dt data-i18n="specAlso">Also</dt><dd data-i18n="specAlsoVal">Diseño de problemas algorítmicos</dd></div>
     </dl>
   </div>
 </section>
@@ -88,12 +88,12 @@
 <div class="tear"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
 
 <section class="skills" id="habilidades">
-  <p class="eyebrow" data-i18n="skillsEyebrow">HABILIDADES</p>
+  <p class="eyebrow" data-i18n="skillsEyebrow">SKILLS</p>
   <div class="skills-table">
     <div class="skills-row skills-head">
-      <span data-i18n="skillsHeadLevel">Nivel</span>
-      <span data-i18n="skillsHeadItem">Artículo</span>
-      <span class="skills-note-head" data-i18n="skillsHeadNote">Nota</span>
+      <span data-i18n="skillsHeadLevel">Level</span>
+      <span data-i18n="skillsHeadItem">Item</span>
+      <span class="skills-note-head" data-i18n="skillsHeadNote">Note</span>
     </div>
     <div class="skills-row" data-fill="90">
       <span class="dots"><i></i><i></i><i></i><i></i><i></i></span>
@@ -132,7 +132,7 @@
     </div>
     <div class="skills-row" data-fill="70">
       <span class="dots"><i></i><i></i><i></i><i></i><i></i></span>
-      <span class="skill-name" data-i18n="skillName5">Shopify Liquid & Themes</span>
+      <span class="skill-name" data-i18n="skillName5">production web & Themes</span>
       <span class="skill-note" data-i18n="skillNote5">Plantillas a medida, cuando el proyecto lo pide</span>
     </div>
     <div class="skills-row" data-fill="95">
@@ -141,49 +141,51 @@
       <span class="skill-note" data-i18n="skillNote6">Diseño de problemas para Codeforces</span>
     </div>
   </div>
-  <button class="btn btn-ghost skills-add" data-cart-item="Habilidades full-stack" data-i18n="skillsAddBtn">+ Añadir habilidades al carrito</button>
+  <button class="btn btn-ghost skills-add" data-cart-item="Skills full-stack" data-i18n="skillsAddBtn">+ Añadir habilidades al carrito</button>
 </section>
 
 <div class="tear"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
 
 <section class="projects" id="proyectos">
-  <p class="eyebrow" data-i18n="projectsEyebrow">PROYECTOS</p>
+  <p class="eyebrow" data-i18n="projectsEyebrow">PROJECTS</p>
   <div class="project-grid">
 
     <article class="project-card featured">
-      <span class="project-tag" data-i18n="projTag1">PROYECTO INSIGNIA</span>
-      <h3 data-i18n="projTitle1">Plataforma de e-commerce industrial</h3>
-      <p data-i18n="projDesc1">Sitio para un fabricante boliviano de sacos de polipropileno tejido y empaques industriales. Frontend en Astro + Tailwind, backend en PHP bajo un mismo dominio para evitar CORS, chatbot nativo por WhatsApp Cloud API y un sistema de acceso a catálogo por código QR con tokens y revocación automática.</p>
-      <ul class="project-chips">
-        <li>Astro</li><li>Tailwind</li><li>PHP</li><li>WhatsApp API</li><li data-i18n="chipAuthQR">Auth QR</li>
-      </ul>
-      <button class="btn btn-primary add-btn" data-cart-item="Plataforma e-commerce" data-i18n="addToCartBtn">Añadir al carrito</button>
+      <span class="project-tag" data-i18n="projTag1">FLAGSHIP PROJECT</span>
+      <h3 data-i18n="projTitle1">Operations Hub</h3>
+      <p data-i18n="projDesc1">Independent full-stack product concept for managing teams, projects, tasks, clients and operational activity from one workspace. Built to demonstrate authentication, role-based access, dashboards, API boundaries and database relationships.</p>
+      <ul class="project-chips"><li>React</li><li>TypeScript</li><li>ASP.NET Core</li><li>PostgreSQL</li><li data-i18n="chipAuth">RBAC</li></ul>
+      <button class="btn btn-primary add-btn" data-cart-item="Operations Hub" data-i18n="addToCartBtn">Add to cart</button>
     </article>
 
     <article class="project-card">
-      <span class="project-tag" data-i18n="projTag2">DISEÑO ALGORÍTMICO</span>
-      <h3>Chromatic Chains — Codeforces</h3>
-      <p data-i18n="projDesc2">Problema original para Codeforces sobre coloreo de arreglos, combinando optimización greedy y estructuras de datos. Diseñar un problema exige pensar en cada caso límite antes de que el sistema lo haga por ti.</p>
-      <ul class="project-chips">
-        <li data-i18n="chipAlgo">Algoritmos</li><li data-i18n="chipDataStruct">Estructuras de datos</li><li>Greedy</li>
-      </ul>
-      <button class="btn btn-primary add-btn" data-cart-item="Chromatic Chains" data-i18n="addToCartBtn">Añadir al carrito</button>
+      <span class="project-tag" data-i18n="projTag2">PRODUCT PLATFORM</span>
+      <h3 data-i18n="projTitle2">Appointment Platform</h3>
+      <p data-i18n="projDesc2">Booking flow from service selection to confirmation, with availability rules, customer accounts, admin management and notification-ready architecture.</p>
+      <ul class="project-chips"><li>Next.js</li><li>TypeScript</li><li>REST API</li><li>PostgreSQL</li></ul>
+      <button class="btn btn-primary add-btn" data-cart-item="Appointment Platform" data-i18n="addToCartBtn">Add to cart</button>
     </article>
 
     <article class="project-card">
-      <span class="project-tag" data-i18n="projTag3">EXPLORACIÓN</span>
-      <h3 data-i18n="projTitle3">Evaluación de IA & etiquetado</h3>
-      <p data-i18n="projDesc3">Trabajo con plataformas de etiquetado de datos como Labelbox e interés activo en metodologías de testing y evaluación de modelos de IA — la misma disciplina que aplico para que un producto no falle en producción.</p>
-      <ul class="project-chips">
-        <li>Labelbox</li><li data-i18n="chipModelQA">QA de modelos</li><li>Data labeling</li>
-      </ul>
-      <button class="btn btn-primary add-btn" data-cart-item="Evaluación de IA" data-i18n="addToCartBtn">Añadir al carrito</button>
+      <span class="project-tag" data-i18n="projTag3">REAL-TIME SYSTEM</span>
+      <h3 data-i18n="projTitle3">Project Workspace</h3>
+      <p data-i18n="projDesc3">Collaborative project management workspace with tasks, comments, activity history and real-time updates. Designed around shared state and clear interaction feedback.</p>
+      <ul class="project-chips"><li>React</li><li>WebSockets</li><li>REST API</li><li>Auth</li></ul>
+      <button class="btn btn-primary add-btn" data-cart-item="Project Workspace" data-i18n="addToCartBtn">Add to cart</button>
+    </article>
+
+    <article class="project-card">
+      <span class="project-tag" data-i18n="projTag4">INDEPENDENT BUILD</span>
+      <h3 data-i18n="projTitle4">Finance Dashboard</h3>
+      <p data-i18n="projDesc4">Personal finance product concept covering transactions, categories, budgets and monthly reporting, with a focus on useful data visualization and responsive UX.</p>
+      <ul class="project-chips"><li>Astro</li><li>TypeScript</li><li>Charts</li><li>Responsive UI</li></ul>
+      <button class="btn btn-primary add-btn" data-cart-item="Finance Dashboard" data-i18n="addToCartBtn">Add to cart</button>
     </article>
 
   </div>
 </section>
 
-<div class="tear"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div class="tear"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
 
 <section class="process" id="proceso">
   <p class="eyebrow" data-i18n="processEyebrow">EXPERIENCIA</p>
@@ -198,11 +200,11 @@
 <div class="tear"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
 
 <section class="checkout" id="contacto">
-  <p class="eyebrow" data-i18n="checkoutEyebrow">FINALIZAR PEDIDO</p>
+  <p class="eyebrow" data-i18n="checkoutEyebrow">CHECKOUT</p>
   <div class="checkout-grid">
 
     <div class="order-summary">
-      <h3 data-i18n="orderSummaryTitle">Resumen del carrito</h3>
+      <h3 data-i18n="orderSummaryTitle">Cart summary</h3>
       <ul class="order-list" id="orderList"></ul>
       <p class="order-empty" id="orderEmpty" data-i18n="orderEmptyMsg">Tu carrito está vacío — añade un proyecto o una habilidad arriba.</p>
       <div class="order-total">
@@ -221,10 +223,10 @@
     </div>
 
     <form class="checkout-form" id="checkoutForm">
-      <label><span data-i18n="formName">Nombre</span><input type="text" name="nombre" required></label>
+      <label><span data-i18n="formName">Name</span><input type="text" name="nombre" required></label>
       <label><span data-i18n="formEmail">Email</span><input type="email" name="email" required></label>
-      <label><span data-i18n="formMessage">Mensaje</span><textarea name="mensaje" rows="4" required></textarea></label>
-      <button type="submit" class="btn btn-primary btn-block" data-i18n="formSubmit">Enviar pedido</button>
+      <label><span data-i18n="formMessage">Message</span><textarea name="mensaje" rows="4" required></textarea></label>
+      <button type="submit" class="btn btn-primary btn-block" data-i18n="formSubmit">Send inquiry</button>
     </form>
 
   </div>

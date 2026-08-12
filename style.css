@@ -81,6 +81,7 @@ a{color:inherit;text-decoration:none;}
 .catalog-card.tag-1{transform:rotate(-1deg);}
 .catalog-card.tag-2{transform:rotate(1deg);}
 .catalog-card.tag-3{transform:rotate(-.6deg);}
+.catalog-card.tag-4{transform:rotate(.8deg);}
 .catalog-card:not(.disabled):hover{
   transform:rotate(0deg) translateY(-4px);
   border-color:var(--ink);
@@ -112,7 +113,7 @@ a{color:inherit;text-decoration:none;}
 }
 @media (max-width:700px){
   .catalog-grid{grid-template-columns:1fr;}
-  .catalog-card.tag-1,.catalog-card.tag-2,.catalog-card.tag-3{transform:rotate(0deg);}
+  .catalog-card.tag-1,.catalog-card.tag-2,.catalog-card.tag-3,.catalog-card.tag-4{transform:rotate(0deg);}
 }
 
 @media (prefers-reduced-motion:reduce){

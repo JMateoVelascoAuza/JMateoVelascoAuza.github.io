@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mateo Velasco — Desarrollador Backend</title>
+<title>Mateo Velasco — Developer Backend</title>
 <meta name="description" content="Mateo Velasco, desarrollador backend especializado en APIs, autenticación y arquitectura: PHP, Apache y sistemas de acceso.">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Mateo Velasco — Desarrollador Backend">
+<meta property="og:title" content="Mateo Velasco — Developer Backend">
 <meta property="og:description" content="APIs en PHP, autenticación por sesión y arquitectura de despliegue para negocio real.">
 <meta property="og:image" content="https://jmateovelascoauza.github.io/og-image.png">
 <meta property="og:url" content="https://jmateovelascoauza.github.io/backend-dev/">
@@ -28,12 +28,12 @@
   </a>
   <nav class="nav">
     <a href="../" class="nav-back" data-i18n="navBack">← Catálogo</a>
-    <a href="#proyectos" data-i18n="navProjects">Proyectos</a>
-    <a href="#habilidades" data-i18n="navSkills">Habilidades</a>
-    <a href="#proceso" data-i18n="navProcess">Proceso</a>
-    <a href="#contacto" data-i18n="navContact">Contacto</a>
+    <a href="#proyectos" data-i18n="navProjects">Projects</a>
+    <a href="#habilidades" data-i18n="navSkills">Skills</a>
+    <a href="#proceso" data-i18n="navProcess">Process</a>
+    <a href="#contacto" data-i18n="navContact">Contact</a>
   </nav>
-  <button class="cart-btn" id="cartBtn" aria-label="Abrir carrito">
+  <button class="cart-btn" id="cartBtn" aria-label="Open cart">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.6L21 8H6"/><circle cx="10" cy="21" r="1"/><circle cx="18" cy="21" r="1"/></svg>
     <span class="cart-count" id="cartCount">0</span>
   </button>
@@ -42,12 +42,12 @@
 
 <aside class="cart-drawer" id="cartDrawer">
   <div class="cart-drawer-head">
-    <span data-i18n="cartTitle">TU CARRITO</span>
-    <button id="cartClose" aria-label="Cerrar carrito">✕</button>
+    <span data-i18n="cartTitle">YOUR CART</span>
+    <button id="cartClose" aria-label="Close cart">✕</button>
   </div>
   <ul class="cart-list" id="cartList"></ul>
   <p class="cart-empty" id="cartEmpty" data-i18n="cartEmptyMsg">Aún no añadiste nada. Explora los proyectos y habilidades.</p>
-  <a href="#contacto" class="cart-checkout" id="cartCheckout" data-i18n="cartCheckoutLink">Ir a checkout →</a>
+  <a href="#contacto" class="cart-checkout" id="cartCheckout" data-i18n="cartCheckoutLink">Go to checkout →</a>
 </aside>
 <div class="cart-overlay" id="cartOverlay"></div>
 
@@ -55,12 +55,12 @@
 
 <section class="hero" id="inicio">
   <div class="hero-inner">
-    <p class="eyebrow" data-i18n="heroEyebrow">RECIBO N.º 002 — DESARROLLADOR BACKEND</p>
+    <p class="eyebrow" data-i18n="heroEyebrow">RECEIPT N.º 002 — DEVELOPER BACKEND</p>
     <h1 class="hero-title" id="typeTarget"></h1>
-    <p class="hero-sub" data-i18n="heroSub">Desarrollador backend enfocado en APIs, autenticación y arquitecturas que sostienen negocio real. Con base en La Paz, Bolivia.</p>
+    <p class="hero-sub" data-i18n="heroSub">Developer backend enfocado en APIs, autenticación y arquitecturas que sostienen negocio real. Con base en La Paz, Bolivia.</p>
     <div class="hero-actions">
-      <a href="#proyectos" class="btn btn-primary" data-i18n="btnSeeProjects">Ver proyectos</a>
-      <a href="#habilidades" class="btn btn-ghost" data-i18n="btnSeeSkills">Ver habilidades</a>
+      <a href="#proyectos" class="btn btn-primary" data-i18n="btnSeeProjects">View projects</a>
+      <a href="#habilidades" class="btn btn-ghost" data-i18n="btnSeeSkills">View skills</a>
     </div>
   </div>
   <div class="barcode" aria-hidden="true">
@@ -72,15 +72,15 @@
 <div class="tear"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
 
 <section class="ficha" id="ficha">
-  <p class="eyebrow" data-i18n="fichaEyebrow">FICHA DEL PRODUCTO</p>
+  <p class="eyebrow" data-i18n="fichaEyebrow">PRODUCT SHEET</p>
   <div class="ficha-grid">
     <p class="ficha-bio" data-i18n="fichaBio">Construyo APIs en PHP que sostienen catálogos, accesos y automatizaciones para negocios reales: autenticación por sesión, tokens con revocación automática e integraciones externas como WhatsApp Cloud API. Me interesa tanto resolver el problema de negocio como el código que resiste producción — rutas, permisos y casos límite.</p>
     <dl class="ficha-specs">
-      <div><dt data-i18n="specLoc">Ubicación</dt><dd>La Paz, Bolivia</dd></div>
-      <div><dt data-i18n="specFocus">Enfoque</dt><dd data-i18n="specFocusVal">APIs & arquitectura backend</dd></div>
+      <div><dt data-i18n="specLoc">Location</dt><dd>La Paz, Bolivia</dd></div>
+      <div><dt data-i18n="specFocus">Focus</dt><dd data-i18n="specFocusVal">APIs & arquitectura backend</dd></div>
       <div><dt data-i18n="specStack">Stack</dt><dd>PHP · Java · Python · C#</dd></div>
-      <div><dt data-i18n="specEdu">Formación</dt><dd data-i18n="specEduVal">Ing. de Sistemas — Universidad Privada Boliviana (en curso)</dd></div>
-      <div><dt data-i18n="specAlso">También</dt><dd data-i18n="specAlsoVal">Diseño de problemas algorítmicos</dd></div>
+      <div><dt data-i18n="specEdu">Education</dt><dd data-i18n="specEduVal">Ing. de Sistemas — Universidad Privada Boliviana (en curso)</dd></div>
+      <div><dt data-i18n="specAlso">Also</dt><dd data-i18n="specAlsoVal">Diseño de problemas algorítmicos</dd></div>
     </dl>
   </div>
 </section>
@@ -88,12 +88,12 @@
 <div class="tear"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
 
 <section class="skills" id="habilidades">
-  <p class="eyebrow" data-i18n="skillsEyebrow">HABILIDADES</p>
+  <p class="eyebrow" data-i18n="skillsEyebrow">SKILLS</p>
   <div class="skills-table">
     <div class="skills-row skills-head">
-      <span data-i18n="skillsHeadLevel">Nivel</span>
-      <span data-i18n="skillsHeadItem">Artículo</span>
-      <span class="skills-note-head" data-i18n="skillsHeadNote">Nota</span>
+      <span data-i18n="skillsHeadLevel">Level</span>
+      <span data-i18n="skillsHeadItem">Item</span>
+      <span class="skills-note-head" data-i18n="skillsHeadNote">Note</span>
     </div>
     <div class="skills-row" data-fill="90">
       <span class="dots"><i></i><i></i><i></i><i></i><i></i></span>
@@ -131,49 +131,51 @@
       <span class="skill-note" data-i18n="skillNote5">Diseño de problemas para Codeforces</span>
     </div>
   </div>
-  <button class="btn btn-ghost skills-add" data-cart-item="Habilidades backend" data-i18n="skillsAddBtn">+ Añadir habilidades al carrito</button>
+  <button class="btn btn-ghost skills-add" data-cart-item="Skills backend" data-i18n="skillsAddBtn">+ Añadir habilidades al carrito</button>
 </section>
 
 <div class="tear"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
 
 <section class="projects" id="proyectos">
-  <p class="eyebrow" data-i18n="projectsEyebrow">PROYECTOS</p>
+  <p class="eyebrow" data-i18n="projectsEyebrow">PROJECTS</p>
   <div class="project-grid">
 
     <article class="project-card featured">
-      <span class="project-tag" data-i18n="projTag1">PROYECTO INSIGNIA</span>
-      <h3 data-i18n="projTitle1">Backend & accesos para e-commerce industrial</h3>
-      <p data-i18n="projDesc1">API en PHP para un fabricante boliviano de empaques industriales, integrada bajo el mismo dominio que el frontend para evitar CORS. Incluye autenticación por sesión, un sistema de acceso a catálogo por código QR con tokens independientes por cliente y revocación automática, panel admin para gestión de QRs, y chatbot nativo por WhatsApp Cloud API.</p>
-      <ul class="project-chips">
-        <li>PHP</li><li data-i18n="chipSessionAuth">Auth por sesión</li><li data-i18n="chipTokensQR">Tokens QR</li><li>Apache/.htaccess</li><li>WhatsApp API</li>
-      </ul>
-      <button class="btn btn-primary add-btn" data-cart-item="Backend & accesos" data-i18n="addToCartBtn">Añadir al carrito</button>
+      <span class="project-tag" data-i18n="projTag1">FLAGSHIP PROJECT</span>
+      <h3 data-i18n="projTitle1">Identity API</h3>
+      <p data-i18n="projDesc1">Independent authentication service concept with registration, login, refresh tokens, protected resources, role-based access control and audit-ready events. The goal is a backend that treats security and failure states as first-class concerns.</p>
+      <ul class="project-chips"><li>C#</li><li>ASP.NET Core</li><li>PostgreSQL</li><li>JWT</li><li data-i18n="chipAuth">RBAC</li></ul>
+      <button class="btn btn-primary add-btn" data-cart-item="Identity API" data-i18n="addToCartBtn">Add to cart</button>
     </article>
 
     <article class="project-card">
-      <span class="project-tag" data-i18n="projTag2">DISEÑO ALGORÍTMICO</span>
-      <h3>Chromatic Chains — Codeforces</h3>
-      <p data-i18n="projDesc2">Problema original para Codeforces sobre coloreo de arreglos, combinando optimización greedy y estructuras de datos. Diseñar un problema exige pensar en cada caso límite antes de que el sistema lo haga por ti.</p>
-      <ul class="project-chips">
-        <li data-i18n="chipAlgo">Algoritmos</li><li data-i18n="chipDataStruct">Estructuras de datos</li><li>Greedy</li>
-      </ul>
-      <button class="btn btn-primary add-btn" data-cart-item="Chromatic Chains" data-i18n="addToCartBtn">Añadir al carrito</button>
+      <span class="project-tag" data-i18n="projTag2">DATA SERVICE</span>
+      <h3 data-i18n="projTitle2">Inventory API</h3>
+      <p data-i18n="projDesc2">REST API for products, categories, stock movements and orders, designed with validation, pagination, filtering, relational data and consistent error responses.</p>
+      <ul class="project-chips"><li>PHP</li><li>REST</li><li>MySQL</li><li>Validation</li></ul>
+      <button class="btn btn-primary add-btn" data-cart-item="Inventory API" data-i18n="addToCartBtn">Add to cart</button>
     </article>
 
     <article class="project-card">
-      <span class="project-tag" data-i18n="projTag3">EXPLORACIÓN</span>
-      <h3 data-i18n="projTitle3">Evaluación de IA & etiquetado</h3>
-      <p data-i18n="projDesc3">Trabajo con plataformas de etiquetado de datos como Labelbox e interés activo en metodologías de testing y evaluación de modelos de IA — la misma disciplina que aplico para que un backend no falle en producción.</p>
-      <ul class="project-chips">
-        <li>Labelbox</li><li data-i18n="chipModelQA">QA de modelos</li><li>Data labeling</li>
-      </ul>
-      <button class="btn btn-primary add-btn" data-cart-item="Evaluación de IA" data-i18n="addToCartBtn">Añadir al carrito</button>
+      <span class="project-tag" data-i18n="projTag3">OBSERVABILITY</span>
+      <h3 data-i18n="projTitle3">Audit Log API</h3>
+      <p data-i18n="projDesc3">Backend service that records security and business events with actor, action, timestamp and context. Includes filtering and a query-friendly structure for operational debugging.</p>
+      <ul class="project-chips"><li>Python</li><li>FastAPI</li><li>PostgreSQL</li><li>Audit logs</li></ul>
+      <button class="btn btn-primary add-btn" data-cart-item="Audit Log API" data-i18n="addToCartBtn">Add to cart</button>
+    </article>
+
+    <article class="project-card">
+      <span class="project-tag" data-i18n="projTag4">DATA PIPELINE</span>
+      <h3 data-i18n="projTitle4">Data Import Service</h3>
+      <p data-i18n="projDesc4">Import pipeline for structured business data with validation, duplicate detection, transformation rules and clear failure reporting instead of silent partial imports.</p>
+      <ul class="project-chips"><li>Python</li><li>Workers</li><li>Queues</li><li>Validation</li></ul>
+      <button class="btn btn-primary add-btn" data-cart-item="Data Import Service" data-i18n="addToCartBtn">Add to cart</button>
     </article>
 
   </div>
 </section>
 
-<div class="tear"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div class="tear"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
 
 <section class="process" id="proceso">
   <p class="eyebrow" data-i18n="processEyebrow">EXPERIENCIA</p>
@@ -188,11 +190,11 @@
 <div class="tear"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
 
 <section class="checkout" id="contacto">
-  <p class="eyebrow" data-i18n="checkoutEyebrow">FINALIZAR PEDIDO</p>
+  <p class="eyebrow" data-i18n="checkoutEyebrow">CHECKOUT</p>
   <div class="checkout-grid">
 
     <div class="order-summary">
-      <h3 data-i18n="orderSummaryTitle">Resumen del carrito</h3>
+      <h3 data-i18n="orderSummaryTitle">Cart summary</h3>
       <ul class="order-list" id="orderList"></ul>
       <p class="order-empty" id="orderEmpty" data-i18n="orderEmptyMsg">Tu carrito está vacío — añade un proyecto o una habilidad arriba.</p>
       <div class="order-total">
@@ -211,10 +213,10 @@
     </div>
 
     <form class="checkout-form" id="checkoutForm">
-      <label><span data-i18n="formName">Nombre</span><input type="text" name="nombre" required></label>
+      <label><span data-i18n="formName">Name</span><input type="text" name="nombre" required></label>
       <label><span data-i18n="formEmail">Email</span><input type="email" name="email" required></label>
-      <label><span data-i18n="formMessage">Mensaje</span><textarea name="mensaje" rows="4" required></textarea></label>
-      <button type="submit" class="btn btn-primary btn-block" data-i18n="formSubmit">Enviar pedido</button>
+      <label><span data-i18n="formMessage">Message</span><textarea name="mensaje" rows="4" required></textarea></label>
+      <button type="submit" class="btn btn-primary btn-block" data-i18n="formSubmit">Send inquiry</button>
     </form>
 
   </div>
