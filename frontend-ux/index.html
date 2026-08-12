@@ -24,12 +24,13 @@
 <header class="topbar">
   <a href="#inicio" class="brand">
     <span class="brand-mark">MV</span>
-    <span class="brand-stamp">VITRINA °03</span>
+    <span class="brand-stamp" data-i18n="brandStamp">VITRINA °03</span>
   </a>
   <nav class="nav">
     <a href="../" class="nav-back" data-i18n="navBack">← Catálogo</a>
     <a href="#proyectos" data-i18n="navProjects">Proyectos</a>
     <a href="#habilidades" data-i18n="navSkills">Habilidades</a>
+    <a href="#disenos" data-i18n="navDesigns">Diseños</a>
     <a href="#proceso" data-i18n="navProcess">Proceso</a>
     <a href="#contacto" data-i18n="navContact">Contacto</a>
   </nav>
@@ -78,7 +79,8 @@
     <dl class="ficha-specs">
       <div><dt data-i18n="specLoc">Ubicación</dt><dd>La Paz, Bolivia</dd></div>
       <div><dt data-i18n="specFocus">Enfoque</dt><dd data-i18n="specFocusVal">UX/UI & interacción</dd></div>
-      <div><dt data-i18n="specStack">Stack</dt><dd>Astro · Tailwind · CSS/SVG a medida</dd></div>
+      <div><dt data-i18n="specStack">Stack</dt><dd>Astro · React · Angular · TypeScript</dd></div>
+      <div><dt data-i18n="specEdu">Formación</dt><dd data-i18n="specEduVal">Ing. de Sistemas — Universidad Privada Boliviana (en curso)</dd></div>
       <div><dt data-i18n="specAlso">También</dt><dd data-i18n="specAlsoVal">Diseño de problemas algorítmicos</dd></div>
     </dl>
   </div>
@@ -96,41 +98,129 @@
     </div>
     <div class="skills-row" data-fill="92">
       <span class="dots"><i></i><i></i><i></i><i></i><i></i></span>
-      <span class="skill-name">Astro + Tailwind CSS</span>
+      <span class="skill-name" data-i18n="skillName1">Astro + Tailwind CSS</span>
       <span class="skill-note" data-i18n="skillNote1">Sistemas de diseño consistentes y mantenibles</span>
     </div>
     <div class="skills-row" data-fill="88">
       <span class="dots"><i></i><i></i><i></i><i></i><i></i></span>
-      <span class="skill-name">Microinteracciones & animación</span>
+      <span class="skill-name" data-i18n="skillName2">Microinteracciones & animación</span>
       <span class="skill-note" data-i18n="skillNote2">Feedback visual en cada acción del usuario</span>
     </div>
     <div class="skills-row" data-fill="85">
       <span class="dots"><i></i><i></i><i></i><i></i><i></i></span>
-      <span class="skill-name">Jerarquía visual & tipografía</span>
+      <span class="skill-name" data-i18n="skillName3">Jerarquía visual & tipografía</span>
       <span class="skill-note" data-i18n="skillNote3">Información que se entiende sin leer todo</span>
+    </div>
+    <div class="skills-row" data-fill="85">
+      <span class="dots"><i></i><i></i><i></i><i></i><i></i></span>
+      <span class="skill-name" data-i18n="skillName8">React</span>
+      <span class="skill-note" data-i18n="skillNote8">Interfaces basadas en componentes y estado</span>
+    </div>
+    <div class="skills-row" data-fill="78">
+      <span class="dots"><i></i><i></i><i></i><i></i><i></i></span>
+      <span class="skill-name" data-i18n="skillName9">Angular & TypeScript</span>
+      <span class="skill-note" data-i18n="skillNote9">Tipado estático en proyectos más grandes</span>
     </div>
     <div class="skills-row" data-fill="82">
       <span class="dots"><i></i><i></i><i></i><i></i><i></i></span>
-      <span class="skill-name">UI a medida, sin librerías genéricas</span>
+      <span class="skill-name" data-i18n="skillName4">UI a medida, sin librerías genéricas</span>
       <span class="skill-note" data-i18n="skillNote4">Componentes construidos desde cero en CSS/SVG</span>
     </div>
     <div class="skills-row" data-fill="78">
       <span class="dots"><i></i><i></i><i></i><i></i><i></i></span>
-      <span class="skill-name">Responsive & accesibilidad básica</span>
+      <span class="skill-name" data-i18n="skillName5">Responsive & accesibilidad básica</span>
       <span class="skill-note" data-i18n="skillNote5">Layouts que funcionan en cualquier pantalla</span>
-    </div>
-    <div class="skills-row" data-fill="75">
-      <span class="dots"><i></i><i></i><i></i><i></i><i></i></span>
-      <span class="skill-name">Arquitectura & despliegue</span>
-      <span class="skill-note" data-i18n="skillNote6">De XAMPP local a hosting en producción</span>
     </div>
     <div class="skills-row" data-fill="95">
       <span class="dots"><i></i><i></i><i></i><i></i><i></i></span>
-      <span class="skill-name">Algoritmos & estructuras de datos</span>
+      <span class="skill-name" data-i18n="skillName7">Algoritmos & estructuras de datos</span>
       <span class="skill-note" data-i18n="skillNote7">Diseño de problemas para Codeforces</span>
     </div>
   </div>
   <button class="btn btn-ghost skills-add" data-cart-item="Habilidades UX/UI" data-i18n="skillsAddBtn">+ Añadir habilidades al carrito</button>
+</section>
+
+<div class="tear"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+
+<section class="concepts" id="disenos">
+  <p class="eyebrow" data-i18n="conceptsEyebrow">DISEÑOS CONCEPTUALES</p>
+  <p class="concepts-intro" data-i18n="conceptsIntro">Tres direcciones visuales distintas para el mismo tipo de problema: una landing. Sin cliente real detrás — son ejercicios de estética y sistema, construidos en HTML/CSS puro.</p>
+
+  <div class="concepts-grid">
+
+    <div class="concept-card">
+      <div class="concept-browser saas">
+        <div class="browser-bar">
+          <span></span><span></span><span></span>
+          <div class="browser-url">saas-startup.io</div>
+        </div>
+        <div class="browser-body">
+          <div class="mock-nav">
+            <div class="mock-logo"></div>
+            <div class="mock-navlinks"><span></span><span></span><span></span></div>
+            <div class="mock-btn"></div>
+          </div>
+          <div class="mock-hero">
+            <div class="mock-bar big"></div>
+            <div class="mock-bar big short"></div>
+            <div class="mock-bar small"></div>
+            <div class="mock-cta"></div>
+          </div>
+          <div class="mock-grid">
+            <div class="mock-tile"></div><div class="mock-tile"></div><div class="mock-tile"></div>
+          </div>
+        </div>
+      </div>
+      <p class="concept-caption"><strong data-i18n="concept1Title">SaaS minimalista</strong><span data-i18n="concept1Desc"> — tipografía grande, mucho blanco, un solo acento de color.</span></p>
+    </div>
+
+    <div class="concept-card">
+      <div class="concept-browser ecommerce">
+        <div class="browser-bar">
+          <span></span><span></span><span></span>
+          <div class="browser-url">tienda-vivida.shop</div>
+        </div>
+        <div class="browser-body">
+          <div class="mock-nav">
+            <div class="mock-logo"></div>
+            <div class="mock-navlinks"><span></span><span></span><span></span></div>
+            <div class="mock-btn"></div>
+          </div>
+          <div class="mock-banner"></div>
+          <div class="mock-grid three">
+            <div class="mock-tile tall"></div><div class="mock-tile tall"></div><div class="mock-tile tall"></div>
+          </div>
+        </div>
+      </div>
+      <p class="concept-caption"><strong data-i18n="concept2Title">E-commerce vibrante</strong><span data-i18n="concept2Desc"> — color saturado, grilla de producto, botones grandes y directos.</span></p>
+    </div>
+
+    <div class="concept-card">
+      <div class="concept-browser darkport">
+        <div class="browser-bar">
+          <span></span><span></span><span></span>
+          <div class="browser-url">terminal.dev</div>
+        </div>
+        <div class="browser-body">
+          <div class="mock-nav">
+            <div class="mock-logo"></div>
+            <div class="mock-navlinks"><span></span><span></span><span></span></div>
+            <div class="mock-btn"></div>
+          </div>
+          <div class="mock-hero mono">
+            <div class="mock-bar big"></div>
+            <div class="mock-bar small"></div>
+            <div class="mock-cta"></div>
+          </div>
+          <div class="mock-grid">
+            <div class="mock-tile"></div><div class="mock-tile"></div><div class="mock-tile"></div>
+          </div>
+        </div>
+      </div>
+      <p class="concept-caption"><strong data-i18n="concept3Title">Portfolio oscuro</strong><span data-i18n="concept3Desc"> — dark mode, monoespaciada, acento único tipo terminal.</span></p>
+    </div>
+
+  </div>
 </section>
 
 <div class="tear"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
@@ -141,12 +231,12 @@
 
     <article class="project-card featured">
       <span class="project-tag" data-i18n="projTag1">PROYECTO INSIGNIA</span>
-      <h3 data-i18n="projTitle1">Inbolsa Neo — Frontend & UI</h3>
+      <h3 data-i18n="projTitle1">Frontend & UI para e-commerce industrial</h3>
       <p data-i18n="projDesc1">Rediseño integral de interfaz para un fabricante boliviano de empaques industriales: animaciones dinámicas, efectos hover, elementos interactivos y una experiencia de acceso a catálogo propia, construida en Astro + Tailwind sobre un backend real.</p>
       <ul class="project-chips">
-        <li>Astro</li><li>Tailwind</li><li>Animaciones</li><li>UI a medida</li>
+        <li>Astro</li><li>Tailwind</li><li data-i18n="chipAnimations">Animaciones</li><li data-i18n="chipCustomUI">UI a medida</li>
       </ul>
-      <button class="btn btn-primary add-btn" data-cart-item="Inbolsa Neo — Frontend" data-i18n="addToCartBtn">Añadir al carrito</button>
+      <button class="btn btn-primary add-btn" data-cart-item="Frontend & UI" data-i18n="addToCartBtn">Añadir al carrito</button>
     </article>
 
     <article class="project-card">
@@ -154,7 +244,7 @@
       <h3 data-i18n="projTitle2">Este mismo portafolio</h3>
       <p data-i18n="projDesc2">El catálogo y los portafolios que estás viendo ahora son en sí mismos una pieza de UX: un carrito funcional que conecta habilidades y proyectos con el contacto final, sellos animados y un sistema visual construido desde cero, sin librerías de UI.</p>
       <ul class="project-chips">
-        <li>HTML/CSS/JS</li><li>Animación</li><li>Sistema de diseño</li>
+        <li>HTML/CSS/JS</li><li data-i18n="chipAnimation">Animación</li><li data-i18n="chipDesignSystem">Sistema de diseño</li>
       </ul>
       <button class="btn btn-primary add-btn" data-cart-item="Este portafolio" data-i18n="addToCartBtn">Añadir al carrito</button>
     </article>
@@ -164,7 +254,7 @@
       <h3>Chromatic Chains — Codeforces</h3>
       <p data-i18n="projDesc3">Problema original para Codeforces sobre coloreo de arreglos, combinando optimización greedy y estructuras de datos. Diseñar un problema exige pensar en cada caso límite antes de que el sistema lo haga por ti.</p>
       <ul class="project-chips">
-        <li>Algoritmos</li><li>Estructuras de datos</li><li>Greedy</li>
+        <li data-i18n="chipAlgo">Algoritmos</li><li data-i18n="chipDataStruct">Estructuras de datos</li><li>Greedy</li>
       </ul>
       <button class="btn btn-primary add-btn" data-cart-item="Chromatic Chains" data-i18n="addToCartBtn">Añadir al carrito</button>
     </article>
@@ -175,12 +265,12 @@
 <div class="tear"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
 
 <section class="process" id="proceso">
-  <p class="eyebrow" data-i18n="processEyebrow">CÓMO SE ARMA EL PEDIDO</p>
+  <p class="eyebrow" data-i18n="processEyebrow">EXPERIENCIA</p>
   <ol class="process-list">
-    <li><span class="process-n">01</span><div><h4 data-i18n="proc1Title">Diagnóstico</h4><p data-i18n="proc1Desc">Entender el negocio antes de tocar código.</p></div></li>
-    <li><span class="process-n">02</span><div><h4 data-i18n="proc2Title">Diseño</h4><p data-i18n="proc2Desc">Sistemas visuales claros, no solo decorativos.</p></div></li>
-    <li><span class="process-n">03</span><div><h4 data-i18n="proc3Title">Desarrollo</h4><p data-i18n="proc3Desc">Componentes, animación y estados: interfaz que se sostiene sola.</p></div></li>
-    <li><span class="process-n">04</span><div><h4 data-i18n="proc4Title">Lanzamiento & soporte</h4><p data-i18n="proc4Desc">Despliegue, monitoreo y ajustes en producción.</p></div></li>
+    <li><span class="process-n">2021</span><div><h4 data-i18n="proc1Title">Desarrollo móvil & web</h4><p data-i18n="proc1Desc">Frontend en apps móviles y web, colaborando en UX y performance con equipos multidisciplinarios.</p></div></li>
+    <li><span class="process-n">2023</span><div><h4 data-i18n="proc2Title">Apps & nuevas plataformas</h4><p data-i18n="proc2Desc">Interfaces para apps móviles y web, adaptando rápido a nuevas plataformas y tecnologías.</p></div></li>
+    <li><span class="process-n">2024</span><div><h4 data-i18n="proc3Title">Integraciones & UI</h4><p data-i18n="proc3Desc">Interfaces para herramientas de integración y automatización de flujos.</p></div></li>
+    <li><span class="process-n">2025</span><div><h4 data-i18n="proc4Title">Frontend & sistemas</h4><p data-i18n="proc4Desc">Diseño UX/UI y desarrollo frontend desde cero para un producto real en producción.</p></div></li>
   </ol>
 </section>
 
@@ -205,7 +295,7 @@
       </div>
       <div class="qr-block">
         <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&margin=8&color=27-28-24&bgcolor=238-239-231&data=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fmateo-velasco-48256620b%2F" width="120" height="120" alt="Código QR al perfil de LinkedIn de Mateo Velasco" loading="lazy">
-        <p class="qr-caption" data-i18n="qrCaption">Escaneá para guardar mi LinkedIn — mismo mecanismo de acceso por QR que construí para Inbolsa Neo.</p>
+        <p class="qr-caption" data-i18n="qrCaption">Escaneá para guardar mi LinkedIn — mismo mecanismo de acceso por QR que construí en un proyecto real.</p>
       </div>
     </div>
 

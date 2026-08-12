@@ -8,7 +8,7 @@
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Mateo Velasco — Desarrollador Backend">
-<meta property="og:description" content="APIs en PHP, autenticación por sesión y arquitectura de despliegue. Proyecto insignia: Inbolsa Neo.">
+<meta property="og:description" content="APIs en PHP, autenticación por sesión y arquitectura de despliegue para negocio real.">
 <meta property="og:image" content="https://jmateovelascoauza.github.io/og-image.png">
 <meta property="og:url" content="https://jmateovelascoauza.github.io/backend-dev/">
 <meta name="twitter:card" content="summary_large_image">
@@ -24,7 +24,7 @@
 <header class="topbar">
   <a href="#inicio" class="brand">
     <span class="brand-mark">MV</span>
-    <span class="brand-stamp">ALMACÉN °02</span>
+    <span class="brand-stamp" data-i18n="brandStamp">ALMACÉN °02</span>
   </a>
   <nav class="nav">
     <a href="../" class="nav-back" data-i18n="navBack">← Catálogo</a>
@@ -78,7 +78,8 @@
     <dl class="ficha-specs">
       <div><dt data-i18n="specLoc">Ubicación</dt><dd>La Paz, Bolivia</dd></div>
       <div><dt data-i18n="specFocus">Enfoque</dt><dd data-i18n="specFocusVal">APIs & arquitectura backend</dd></div>
-      <div><dt data-i18n="specStack">Stack</dt><dd>PHP · Apache · REST · Sesiones</dd></div>
+      <div><dt data-i18n="specStack">Stack</dt><dd>PHP · Java · Python · C#</dd></div>
+      <div><dt data-i18n="specEdu">Formación</dt><dd data-i18n="specEduVal">Ing. de Sistemas — Universidad Privada Boliviana (en curso)</dd></div>
       <div><dt data-i18n="specAlso">También</dt><dd data-i18n="specAlsoVal">Diseño de problemas algorítmicos</dd></div>
     </dl>
   </div>
@@ -96,38 +97,38 @@
     </div>
     <div class="skills-row" data-fill="90">
       <span class="dots"><i></i><i></i><i></i><i></i><i></i></span>
-      <span class="skill-name">PHP (APIs REST)</span>
+      <span class="skill-name" data-i18n="skillName1">PHP (APIs REST)</span>
       <span class="skill-note" data-i18n="skillNote1">Catálogos, autenticación, integraciones</span>
     </div>
     <div class="skills-row" data-fill="88">
       <span class="dots"><i></i><i></i><i></i><i></i><i></i></span>
-      <span class="skill-name">Autenticación & control de acceso</span>
+      <span class="skill-name" data-i18n="skillName2">Autenticación & control de acceso</span>
       <span class="skill-note" data-i18n="skillNote2">Sesiones, tokens por cliente, revocación automática</span>
+    </div>
+    <div class="skills-row" data-fill="82">
+      <span class="dots"><i></i><i></i><i></i><i></i><i></i></span>
+      <span class="skill-name" data-i18n="skillName8">Integraciones CRM & APIs</span>
+      <span class="skill-note" data-i18n="skillNote8">GoHighLevel, ViciDial, Zendesk, Kommo</span>
+    </div>
+    <div class="skills-row" data-fill="78">
+      <span class="dots"><i></i><i></i><i></i><i></i><i></i></span>
+      <span class="skill-name" data-i18n="skillName9">Java, Python, C#</span>
+      <span class="skill-note" data-i18n="skillNote9">Lógica de backend fuera del ecosistema PHP</span>
     </div>
     <div class="skills-row" data-fill="85">
       <span class="dots"><i></i><i></i><i></i><i></i><i></i></span>
-      <span class="skill-name">Arquitectura & despliegue con Apache</span>
+      <span class="skill-name" data-i18n="skillName3">Arquitectura & despliegue con Apache</span>
       <span class="skill-note" data-i18n="skillNote3">mod_rewrite, .htaccess, rutas bajo subcarpetas</span>
     </div>
     <div class="skills-row" data-fill="80">
       <span class="dots"><i></i><i></i><i></i><i></i><i></i></span>
-      <span class="skill-name">WhatsApp Cloud API</span>
+      <span class="skill-name" data-i18n="skillName4">WhatsApp Cloud API</span>
       <span class="skill-note" data-i18n="skillNote4">Integraciones nativas, sin dependencias externas</span>
     </div>
     <div class="skills-row" data-fill="95">
       <span class="dots"><i></i><i></i><i></i><i></i><i></i></span>
-      <span class="skill-name">Algoritmos & estructuras de datos</span>
+      <span class="skill-name" data-i18n="skillName5">Algoritmos & estructuras de datos</span>
       <span class="skill-note" data-i18n="skillNote5">Diseño de problemas para Codeforces</span>
-    </div>
-    <div class="skills-row" data-fill="70">
-      <span class="dots"><i></i><i></i><i></i><i></i><i></i></span>
-      <span class="skill-name">Evaluación de modelos de IA</span>
-      <span class="skill-note" data-i18n="skillNote6">Etiquetado de datos con Labelbox</span>
-    </div>
-    <div class="skills-row" data-fill="75">
-      <span class="dots"><i></i><i></i><i></i><i></i><i></i></span>
-      <span class="skill-name">Astro + Tailwind (frontend de apoyo)</span>
-      <span class="skill-note" data-i18n="skillNote7">Cuando el backend necesita una cara</span>
     </div>
   </div>
   <button class="btn btn-ghost skills-add" data-cart-item="Habilidades backend" data-i18n="skillsAddBtn">+ Añadir habilidades al carrito</button>
@@ -141,12 +142,12 @@
 
     <article class="project-card featured">
       <span class="project-tag" data-i18n="projTag1">PROYECTO INSIGNIA</span>
-      <h3 data-i18n="projTitle1">Inbolsa Neo — Backend & accesos</h3>
+      <h3 data-i18n="projTitle1">Backend & accesos para e-commerce industrial</h3>
       <p data-i18n="projDesc1">API en PHP para un fabricante boliviano de empaques industriales, integrada bajo el mismo dominio que el frontend para evitar CORS. Incluye autenticación por sesión, un sistema de acceso a catálogo por código QR con tokens independientes por cliente y revocación automática, panel admin para gestión de QRs, y chatbot nativo por WhatsApp Cloud API.</p>
       <ul class="project-chips">
-        <li>PHP</li><li>Auth por sesión</li><li>Tokens QR</li><li>Apache/.htaccess</li><li>WhatsApp API</li>
+        <li>PHP</li><li data-i18n="chipSessionAuth">Auth por sesión</li><li data-i18n="chipTokensQR">Tokens QR</li><li>Apache/.htaccess</li><li>WhatsApp API</li>
       </ul>
-      <button class="btn btn-primary add-btn" data-cart-item="Inbolsa Neo — Backend" data-i18n="addToCartBtn">Añadir al carrito</button>
+      <button class="btn btn-primary add-btn" data-cart-item="Backend & accesos" data-i18n="addToCartBtn">Añadir al carrito</button>
     </article>
 
     <article class="project-card">
@@ -154,7 +155,7 @@
       <h3>Chromatic Chains — Codeforces</h3>
       <p data-i18n="projDesc2">Problema original para Codeforces sobre coloreo de arreglos, combinando optimización greedy y estructuras de datos. Diseñar un problema exige pensar en cada caso límite antes de que el sistema lo haga por ti.</p>
       <ul class="project-chips">
-        <li>Algoritmos</li><li>Estructuras de datos</li><li>Greedy</li>
+        <li data-i18n="chipAlgo">Algoritmos</li><li data-i18n="chipDataStruct">Estructuras de datos</li><li>Greedy</li>
       </ul>
       <button class="btn btn-primary add-btn" data-cart-item="Chromatic Chains" data-i18n="addToCartBtn">Añadir al carrito</button>
     </article>
@@ -164,7 +165,7 @@
       <h3 data-i18n="projTitle3">Evaluación de IA & etiquetado</h3>
       <p data-i18n="projDesc3">Trabajo con plataformas de etiquetado de datos como Labelbox e interés activo en metodologías de testing y evaluación de modelos de IA — la misma disciplina que aplico para que un backend no falle en producción.</p>
       <ul class="project-chips">
-        <li>Labelbox</li><li>QA de modelos</li><li>Data labeling</li>
+        <li>Labelbox</li><li data-i18n="chipModelQA">QA de modelos</li><li>Data labeling</li>
       </ul>
       <button class="btn btn-primary add-btn" data-cart-item="Evaluación de IA" data-i18n="addToCartBtn">Añadir al carrito</button>
     </article>
@@ -175,12 +176,12 @@
 <div class="tear"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
 
 <section class="process" id="proceso">
-  <p class="eyebrow" data-i18n="processEyebrow">CÓMO SE ARMA EL PEDIDO</p>
+  <p class="eyebrow" data-i18n="processEyebrow">EXPERIENCIA</p>
   <ol class="process-list">
-    <li><span class="process-n">01</span><div><h4 data-i18n="proc1Title">Diagnóstico</h4><p data-i18n="proc1Desc">Entender el negocio antes de tocar código.</p></div></li>
-    <li><span class="process-n">02</span><div><h4 data-i18n="proc2Title">Diseño</h4><p data-i18n="proc2Desc">Sistemas visuales claros, no solo decorativos.</p></div></li>
-    <li><span class="process-n">03</span><div><h4 data-i18n="proc3Title">Desarrollo</h4><p data-i18n="proc3Desc">APIs, autenticación y rutas: código que se puede mantener.</p></div></li>
-    <li><span class="process-n">04</span><div><h4 data-i18n="proc4Title">Lanzamiento & soporte</h4><p data-i18n="proc4Desc">Despliegue, monitoreo y ajustes en producción.</p></div></li>
+    <li><span class="process-n">2021</span><div><h4 data-i18n="proc1Title">Desarrollo móvil & web</h4><p data-i18n="proc1Desc">Contribución backend/frontend en apps móviles y web, colaborando en performance y UX.</p></div></li>
+    <li><span class="process-n">2023</span><div><h4 data-i18n="proc2Title">Apps & nuevas plataformas</h4><p data-i18n="proc2Desc">Soporte técnico y desarrollo adaptando rápidamente a nuevas plataformas y tecnologías.</p></div></li>
+    <li><span class="process-n">2024</span><div><h4 data-i18n="proc3Title">Integraciones & CRM</h4><p data-i18n="proc3Desc">Desarrollo de integraciones en PHP y automatización de flujos sobre GoHighLevel y ViciDial.</p></div></li>
+    <li><span class="process-n">2025</span><div><h4 data-i18n="proc4Title">Backend & sistemas</h4><p data-i18n="proc4Desc">APIs, QA y despliegue para un producto real; integración de sistemas ERP/CRM.</p></div></li>
   </ol>
 </section>
 
@@ -205,7 +206,7 @@
       </div>
       <div class="qr-block">
         <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&margin=8&color=27-28-24&bgcolor=238-239-231&data=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fmateo-velasco-48256620b%2F" width="120" height="120" alt="Código QR al perfil de LinkedIn de Mateo Velasco" loading="lazy">
-        <p class="qr-caption" data-i18n="qrCaption">Escaneá para guardar mi LinkedIn — mismo mecanismo de acceso por QR que construí para Inbolsa Neo.</p>
+        <p class="qr-caption" data-i18n="qrCaption">Escaneá para guardar mi LinkedIn — mismo mecanismo de acceso por QR que construí en un proyecto real.</p>
       </div>
     </div>
 

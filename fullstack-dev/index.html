@@ -8,7 +8,7 @@
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Mateo Velasco — Full-Stack Developer">
-<meta property="og:description" content="Astro, Tailwind, PHP y APIs para productos reales. Proyecto insignia: Inbolsa Neo.">
+<meta property="og:description" content="Astro, Tailwind, PHP y APIs para productos reales, con e-commerce y automatizaciones.">
 <meta property="og:image" content="https://jmateovelascoauza.github.io/og-image.png">
 <meta property="og:url" content="https://jmateovelascoauza.github.io/fullstack-dev/">
 <meta name="twitter:card" content="summary_large_image">
@@ -24,7 +24,7 @@
 <header class="topbar">
   <a href="#inicio" class="brand">
     <span class="brand-mark">MV</span>
-    <span class="brand-stamp">TALLER °01</span>
+    <span class="brand-stamp" data-i18n="brandStamp">TALLER °01</span>
   </a>
   <nav class="nav">
     <a href="../" class="nav-back" data-i18n="navBack">← Catálogo</a>
@@ -78,7 +78,8 @@
     <dl class="ficha-specs">
       <div><dt data-i18n="specLoc">Ubicación</dt><dd>La Paz, Bolivia</dd></div>
       <div><dt data-i18n="specFocus">Enfoque</dt><dd data-i18n="specFocusVal">Producto & arquitectura full-stack</dd></div>
-      <div><dt data-i18n="specStack">Stack</dt><dd>Astro · Tailwind · PHP · Liquid</dd></div>
+      <div><dt data-i18n="specStack">Stack</dt><dd>Astro · React · Angular · PHP</dd></div>
+      <div><dt data-i18n="specEdu">Formación</dt><dd data-i18n="specEduVal">Ing. de Sistemas — Universidad Privada Boliviana (en curso)</dd></div>
       <div><dt data-i18n="specAlso">También</dt><dd data-i18n="specAlsoVal">Diseño de problemas algorítmicos</dd></div>
     </dl>
   </div>
@@ -96,38 +97,48 @@
     </div>
     <div class="skills-row" data-fill="90">
       <span class="dots"><i></i><i></i><i></i><i></i><i></i></span>
-      <span class="skill-name">Astro + Tailwind CSS</span>
+      <span class="skill-name" data-i18n="skillName1">Astro + Tailwind CSS</span>
       <span class="skill-note" data-i18n="skillNote1">Frontends rápidos y mantenibles</span>
     </div>
     <div class="skills-row" data-fill="85">
       <span class="dots"><i></i><i></i><i></i><i></i><i></i></span>
-      <span class="skill-name">PHP (APIs de backend)</span>
+      <span class="skill-name" data-i18n="skillName2">PHP (APIs de backend)</span>
       <span class="skill-note" data-i18n="skillNote2">Catálogos, autenticación, integraciones</span>
     </div>
     <div class="skills-row" data-fill="80">
       <span class="dots"><i></i><i></i><i></i><i></i><i></i></span>
-      <span class="skill-name">Arquitectura & despliegue</span>
+      <span class="skill-name" data-i18n="skillName8">React & Angular</span>
+      <span class="skill-note" data-i18n="skillNote8">Interfaces basadas en componentes</span>
+    </div>
+    <div class="skills-row" data-fill="75">
+      <span class="dots"><i></i><i></i><i></i><i></i><i></i></span>
+      <span class="skill-name" data-i18n="skillName9">Java, C#, Python, C++</span>
+      <span class="skill-note" data-i18n="skillNote9">Base sólida en programación multi-paradigma</span>
+    </div>
+    <div class="skills-row" data-fill="80">
+      <span class="dots"><i></i><i></i><i></i><i></i><i></i></span>
+      <span class="skill-name" data-i18n="skillName10">Integraciones CRM & APIs</span>
+      <span class="skill-note" data-i18n="skillNote10">GoHighLevel, ViciDial, automatización de flujos</span>
+    </div>
+    <div class="skills-row" data-fill="80">
+      <span class="dots"><i></i><i></i><i></i><i></i><i></i></span>
+      <span class="skill-name" data-i18n="skillName3">Arquitectura & despliegue</span>
       <span class="skill-note" data-i18n="skillNote3">De XAMPP local a hosting en producción</span>
     </div>
     <div class="skills-row" data-fill="80">
       <span class="dots"><i></i><i></i><i></i><i></i><i></i></span>
-      <span class="skill-name">WhatsApp Cloud API</span>
+      <span class="skill-name" data-i18n="skillName4">WhatsApp Cloud API</span>
       <span class="skill-note" data-i18n="skillNote4">Chatbots nativos, sin dependencias externas</span>
     </div>
     <div class="skills-row" data-fill="70">
       <span class="dots"><i></i><i></i><i></i><i></i><i></i></span>
-      <span class="skill-name">Shopify Liquid & Themes</span>
+      <span class="skill-name" data-i18n="skillName5">Shopify Liquid & Themes</span>
       <span class="skill-note" data-i18n="skillNote5">Plantillas a medida, cuando el proyecto lo pide</span>
     </div>
     <div class="skills-row" data-fill="95">
       <span class="dots"><i></i><i></i><i></i><i></i><i></i></span>
-      <span class="skill-name">Algoritmos & estructuras de datos</span>
+      <span class="skill-name" data-i18n="skillName6">Algoritmos & estructuras de datos</span>
       <span class="skill-note" data-i18n="skillNote6">Diseño de problemas para Codeforces</span>
-    </div>
-    <div class="skills-row" data-fill="70">
-      <span class="dots"><i></i><i></i><i></i><i></i><i></i></span>
-      <span class="skill-name">Evaluación de modelos de IA</span>
-      <span class="skill-note" data-i18n="skillNote7">Etiquetado de datos con Labelbox</span>
     </div>
   </div>
   <button class="btn btn-ghost skills-add" data-cart-item="Habilidades full-stack" data-i18n="skillsAddBtn">+ Añadir habilidades al carrito</button>
@@ -141,12 +152,12 @@
 
     <article class="project-card featured">
       <span class="project-tag" data-i18n="projTag1">PROYECTO INSIGNIA</span>
-      <h3>Inbolsa Neo</h3>
+      <h3 data-i18n="projTitle1">Plataforma de e-commerce industrial</h3>
       <p data-i18n="projDesc1">Sitio para un fabricante boliviano de sacos de polipropileno tejido y empaques industriales. Frontend en Astro + Tailwind, backend en PHP bajo un mismo dominio para evitar CORS, chatbot nativo por WhatsApp Cloud API y un sistema de acceso a catálogo por código QR con tokens y revocación automática.</p>
       <ul class="project-chips">
-        <li>Astro</li><li>Tailwind</li><li>PHP</li><li>WhatsApp API</li><li>Auth QR</li>
+        <li>Astro</li><li>Tailwind</li><li>PHP</li><li>WhatsApp API</li><li data-i18n="chipAuthQR">Auth QR</li>
       </ul>
-      <button class="btn btn-primary add-btn" data-cart-item="Inbolsa Neo" data-i18n="addToCartBtn">Añadir al carrito</button>
+      <button class="btn btn-primary add-btn" data-cart-item="Plataforma e-commerce" data-i18n="addToCartBtn">Añadir al carrito</button>
     </article>
 
     <article class="project-card">
@@ -154,7 +165,7 @@
       <h3>Chromatic Chains — Codeforces</h3>
       <p data-i18n="projDesc2">Problema original para Codeforces sobre coloreo de arreglos, combinando optimización greedy y estructuras de datos. Diseñar un problema exige pensar en cada caso límite antes de que el sistema lo haga por ti.</p>
       <ul class="project-chips">
-        <li>Algoritmos</li><li>Estructuras de datos</li><li>Greedy</li>
+        <li data-i18n="chipAlgo">Algoritmos</li><li data-i18n="chipDataStruct">Estructuras de datos</li><li>Greedy</li>
       </ul>
       <button class="btn btn-primary add-btn" data-cart-item="Chromatic Chains" data-i18n="addToCartBtn">Añadir al carrito</button>
     </article>
@@ -164,7 +175,7 @@
       <h3 data-i18n="projTitle3">Evaluación de IA & etiquetado</h3>
       <p data-i18n="projDesc3">Trabajo con plataformas de etiquetado de datos como Labelbox e interés activo en metodologías de testing y evaluación de modelos de IA — la misma disciplina que aplico para que un producto no falle en producción.</p>
       <ul class="project-chips">
-        <li>Labelbox</li><li>QA de modelos</li><li>Data labeling</li>
+        <li>Labelbox</li><li data-i18n="chipModelQA">QA de modelos</li><li>Data labeling</li>
       </ul>
       <button class="btn btn-primary add-btn" data-cart-item="Evaluación de IA" data-i18n="addToCartBtn">Añadir al carrito</button>
     </article>
@@ -175,12 +186,12 @@
 <div class="tear"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
 
 <section class="process" id="proceso">
-  <p class="eyebrow" data-i18n="processEyebrow">CÓMO SE ARMA EL PEDIDO</p>
+  <p class="eyebrow" data-i18n="processEyebrow">EXPERIENCIA</p>
   <ol class="process-list">
-    <li><span class="process-n">01</span><div><h4 data-i18n="proc1Title">Diagnóstico</h4><p data-i18n="proc1Desc">Entender el negocio antes de tocar código.</p></div></li>
-    <li><span class="process-n">02</span><div><h4 data-i18n="proc2Title">Diseño</h4><p data-i18n="proc2Desc">Sistemas visuales claros, no solo decorativos.</p></div></li>
-    <li><span class="process-n">03</span><div><h4 data-i18n="proc3Title">Desarrollo</h4><p data-i18n="proc3Desc">Astro, PHP, APIs: código que se puede mantener.</p></div></li>
-    <li><span class="process-n">04</span><div><h4 data-i18n="proc4Title">Lanzamiento & soporte</h4><p data-i18n="proc4Desc">Despliegue, monitoreo y ajustes en producción.</p></div></li>
+    <li><span class="process-n">2021</span><div><h4 data-i18n="proc1Title">Desarrollo móvil & web</h4><p data-i18n="proc1Desc">Frontend en aplicaciones móviles y web, colaborando con equipos multidisciplinarios en UX y performance.</p></div></li>
+    <li><span class="process-n">2023</span><div><h4 data-i18n="proc2Title">Apps & nuevas plataformas</h4><p data-i18n="proc2Desc">Apps móviles y web con foco frontend; integración de tecnologías de fotogrametría y modelado 3D.</p></div></li>
+    <li><span class="process-n">2024</span><div><h4 data-i18n="proc3Title">Integraciones & CRM</h4><p data-i18n="proc3Desc">Automatización de flujos e integraciones en PHP sobre GoHighLevel y ViciDial.</p></div></li>
+    <li><span class="process-n">2025</span><div><h4 data-i18n="proc4Title">Full-stack & sistemas</h4><p data-i18n="proc4Desc">Desarrollo full-stack desde cero, QA, despliegue, diseño UX/UI e integración de sistemas ERP/CRM.</p></div></li>
   </ol>
 </section>
 
@@ -205,7 +216,7 @@
       </div>
       <div class="qr-block">
         <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&margin=8&color=27-28-24&bgcolor=238-239-231&data=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fmateo-velasco-48256620b%2F" width="120" height="120" alt="Código QR al perfil de LinkedIn de Mateo Velasco" loading="lazy">
-        <p class="qr-caption" data-i18n="qrCaption">Escaneá para guardar mi LinkedIn — mismo mecanismo de acceso por QR que construí para Inbolsa Neo.</p>
+        <p class="qr-caption" data-i18n="qrCaption">Escaneá para guardar mi LinkedIn — mismo mecanismo de acceso por QR que construí en un proyecto real.</p>
       </div>
     </div>
 
