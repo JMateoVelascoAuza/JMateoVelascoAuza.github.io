@@ -254,6 +254,14 @@ body.is-ready .it { animation: pop .8s cubic-bezier(.3,1.5,.5,1) forwards; }
 .card p { margin: auto 0 0; font-size: 15px; line-height: 1.55; color: #333; max-width: 440px; }
 .card--peach { background: linear-gradient(180deg, #FFF1E5 0%, #fff 100%); }
 .card--mint { background: linear-gradient(180deg, var(--mint) 0%, #fff 100%); }
+.card--sand { background: linear-gradient(180deg, #F3EEE8 0%, #fff 100%); }
+.card--lilac { background: linear-gradient(180deg, #EFEBFF 0%, #fff 100%); }
+.duo { position: absolute; inset: 0; }
+.duo .mini-phone { width: 27%; bottom: auto; }
+.duo .mini-phone--a { left: 20%; right: auto; top: 0; transform: rotate(-4deg); }
+.duo .mini-phone--b { right: 20%; top: 8%; transform: rotate(3deg); }
+.card:hover .duo .mini-phone--a { transform: translateY(-12px) rotate(-6deg); }
+.card:hover .duo .mini-phone--b { transform: translateY(-18px) rotate(5deg); }
 .card--next { background: linear-gradient(180deg, #EEF2FF 0%, #fff 100%); }
 .card__mock { position: relative; height: 330px; margin: 34px 0 26px; }
 .mini-mac { position: absolute; left: 4%; top: 6%; width: 78%; background: #1C1D24; border-radius: 12px; padding: 8px; transition: transform .6s cubic-bezier(.2,.8,.2,1); }
