@@ -165,8 +165,8 @@
   const paso2 = () => { if (dir) { cards.scrollLeft += dir * 7; raf = requestAnimationFrame(paso2); } };
   [["#next", 1], ["#prev", -1]].forEach(([sel, d]) => {
     const z = $(sel);
-    z.addEventListener("mouseenter", () => { dir = d; cursor.classList.add("is-on"); cursor.classList.toggle("is-prev", d < 0); cancelAnimationFrame(raf); raf = requestAnimationFrame(paso2); });
-    z.addEventListener("mouseleave", () => { dir = 0; cursor.classList.remove("is-on"); });
+    z.addEventListener("mouseenter", () => { dir = d; cards.style.scrollSnapType = "none"; cursor.classList.add("is-on"); cursor.classList.toggle("is-prev", d < 0); cancelAnimationFrame(raf); raf = requestAnimationFrame(paso2); });
+    z.addEventListener("mouseleave", () => { dir = 0; cards.style.scrollSnapType = ""; cursor.classList.remove("is-on"); });
     z.addEventListener("mousemove", (e) => { cursor.style.left = e.clientX + "px"; cursor.style.top = e.clientY + "px"; });
     z.addEventListener("click", () => cards.scrollBy({ left: d * 420, behavior: "smooth" }));
   });
