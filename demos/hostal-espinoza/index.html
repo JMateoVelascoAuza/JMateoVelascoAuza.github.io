@@ -1,0 +1,732 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Hostal Espinoza · Arequipa</title>
+<meta name="description" content="Demo de sitio con reservas directas para Hostal Espinoza, Arequipa. Diseño de muestra por SPARTECH.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&family=Michroma&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23f1f0ea'/%3E%3Ctext x='32' y='42' font-family='Arial' font-size='28' text-anchor='middle' fill='%23151617'%3EE%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --bone:#f1f0ea;--bone2:#e8e6de;--paper:#fbfaf7;--line:#dcdad1;--ink:#1a1b1c;--ink2:#5b5d5f;--ink3:#8b8c88;
+  --amber:#d9932f;--amber-l:#f5e6cc;--ok:#3d7a52;--ok-l:#e3efe6;
+  --body:"Inter Tight",Helvetica,Arial,sans-serif;--brand:Michroma,"Inter Tight",sans-serif;
+  --g:clamp(16px,4vw,40px);--max:1180px;--r:10px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bone);color:var(--ink);font:400 16px/1.6 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer;border:0;background:none}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--g)}
+.eyebrow{font-size:13px;font-weight:500;color:var(--amber);letter-spacing:.02em}
+h1,h2,h3{font-weight:500;letter-spacing:-.025em;line-height:1.08}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 22px;border-radius:999px;font-weight:500;font-size:15px;transition:background .2s,color .2s,transform .2s;text-decoration:none;white-space:nowrap}
+.btn-dark{background:var(--ink);color:var(--paper)}
+.btn-dark:hover{background:#000;transform:translateY(-1px)}
+.btn-amber{background:var(--amber);color:#fff}
+.btn-amber:hover{background:#c5821f}
+.btn-line{border:1px solid var(--line);background:var(--paper)}
+.btn-line:hover{border-color:var(--ink)}
+.btn[disabled]{opacity:.35;pointer-events:none}
+
+/* ribbon */
+.ribbon{background:var(--ink);color:rgba(255,255,255,.7);font-size:12.5px}
+.ribbon .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:8px;padding-bottom:8px;flex-wrap:wrap}
+.ribbon b{color:var(--amber);font-weight:500}
+.ribbon .sp{display:inline-flex;align-items:center;gap:7px;color:#fff;font-family:var(--brand);font-size:10px;letter-spacing:.12em}
+.ribbon .sp svg{width:18px}
+
+/* nav */
+nav.top{position:absolute;left:0;right:0;z-index:20;color:#fff}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;height:80px;gap:20px}
+.logo{text-decoration:none;font-family:var(--brand);font-size:15px;letter-spacing:.1em;text-transform:uppercase;line-height:1.2}
+.logo small{display:block;font-family:var(--body);font-size:11px;letter-spacing:.24em;opacity:.75}
+nav.top ul{display:flex;gap:30px;list-style:none;font-size:14.5px}
+nav.top ul a{text-decoration:none;opacity:.85}
+nav.top ul a:hover{opacity:1}
+nav.top .btn{background:#fff;color:var(--ink);padding:10px 20px}
+@media(max-width:860px){nav.top ul{display:none}}
+
+/* hero */
+.hero{position:relative;min-height:clamp(600px,92vh,860px);display:flex;align-items:flex-end;color:#fff;background:#2a2622;overflow:hidden}
+.hero .bg{position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1727161797764-3f7f83bf3adf?auto=format&fit=crop&w=2000&q=75") center 40%/cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,0) 30%,rgba(0,0,0,.15) 55%,rgba(0,0,0,.6))}
+.hero .in{position:relative;z-index:2;width:100%;padding-top:140px;padding-bottom:48px}
+.hero h1{font-size:clamp(40px,6.4vw,84px);font-weight:400;max-width:12ch}
+.hero p{max-width:470px;margin-top:18px;font-size:clamp(16px,1.5vw,18px);opacity:.9}
+
+.bar{margin-top:36px;background:var(--paper);color:var(--ink);border-radius:16px;display:grid;grid-template-columns:1fr 1fr 1fr auto;align-items:center;padding:8px;box-shadow:0 20px 50px -20px rgba(0,0,0,.45);max-width:860px}
+.bar .f{padding:10px 18px;text-align:left;border-right:1px solid var(--line);display:flex;flex-direction:column;border-radius:10px}
+.bar .f:hover{background:var(--bone)}
+.bar .f:nth-child(3){border-right:0}
+.bar .f span{font-size:12px;color:var(--ink3)}
+.bar .f strong{font-weight:500;font-size:15.5px}
+.bar select{border:0;background:transparent;font-weight:500;font-size:15.5px;appearance:none;cursor:pointer;padding:0}
+.bar .btn{padding:15px 26px}
+@media(max-width:760px){.bar{grid-template-columns:1fr 1fr}.bar .f:nth-child(2){border-right:0}.bar .f:nth-child(3){grid-column:1/-1;border-top:1px solid var(--line);border-radius:0}.bar .btn{grid-column:1/-1;margin-top:6px}}
+
+/* sections */
+section{padding:clamp(72px,9vw,120px) 0}
+.sh{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:44px;flex-wrap:wrap}
+.sh h2{font-size:clamp(30px,4vw,48px);max-width:16ch;margin-top:10px}
+.sh p{color:var(--ink2);max-width:420px}
+
+/* rooms */
+.rooms{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:960px){.rooms{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.rooms{grid-template-columns:1fr}}
+.room{display:flex;flex-direction:column}
+.room .ph{aspect-ratio:4/3.2;border-radius:var(--r);overflow:hidden;background:var(--bone2)}
+.room img{width:100%;height:100%;object-fit:cover;transition:transform .9s}
+.room:hover img{transform:scale(1.04)}
+.room .bd{padding:18px 2px 0;display:flex;flex-direction:column;gap:6px;flex:1}
+.room .row{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.room h3{font-size:21px}
+.room .cap{font-size:13.5px;color:var(--ink3)}
+.room .feat{font-size:14.5px;color:var(--ink2)}
+.room .ft{margin-top:14px;display:flex;justify-content:space-between;align-items:center}
+.price{font-size:20px;font-weight:500}.price small{font-size:13.5px;color:var(--ink3);font-weight:400}
+
+/* why */
+.white{background:var(--paper)}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+.why h3{font-size:18px;margin:14px 0 6px}
+.why p{color:var(--ink2);font-size:15px}
+.why .ic{width:40px;height:40px;border-radius:50%;background:var(--amber-l);display:grid;place-items:center;color:var(--amber)}
+@media(max-width:900px){.why{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.why{grid-template-columns:1fr}}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:250px 250px;gap:14px}
+.gal figure{position:relative;border-radius:var(--r);overflow:hidden;background:var(--bone2)}
+.gal figure:first-child{grid-row:1/3}
+.gal img{width:100%;height:100%;object-fit:cover}
+.gal figcaption{position:absolute;left:14px;bottom:12px;color:#fff;font-size:14px;font-weight:500;text-shadow:0 1px 10px rgba(0,0,0,.5)}
+@media(max-width:760px){.gal{grid-template-columns:1fr 1fr;grid-template-rows:220px 150px 150px}.gal figure:first-child{grid-column:1/3;grid-row:auto}}
+
+/* panel */
+.panel{background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 30px 60px -40px rgba(0,0,0,.35)}
+.p-top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 24px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.p-top .hi{font-weight:500}
+.p-top .hi small{display:block;color:var(--ink3);font-weight:400;font-size:13.5px}
+.tabs{display:flex;background:var(--bone);border-radius:999px;padding:4px}
+.tabs button{padding:8px 16px;border-radius:999px;font-size:14px;color:var(--ink2)}
+.tabs button[aria-selected=true]{background:var(--paper);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.1)}
+.tabs .n{display:inline-grid;place-items:center;min-width:20px;height:20px;padding:0 6px;margin-left:6px;border-radius:999px;background:var(--amber);color:#fff;font-size:12px}
+.p-body{padding:24px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:24px}
+.stat{background:var(--bone);border-radius:12px;padding:16px 18px}
+.stat span{font-size:13.5px;color:var(--ink2)}
+.stat b{display:block;font-size:26px;font-weight:500;margin-top:2px}
+.stat b small{font-size:15px;color:var(--ink3);font-weight:400}
+@media(max-width:620px){.stats{grid-template-columns:1fr}}
+.list h4,.cal-wrap h4{font-size:15px;font-weight:600;margin-bottom:8px}
+.req{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;padding:16px 0;border-top:1px solid var(--line)}
+.av{width:42px;height:42px;border-radius:50%;background:var(--bone2);display:grid;place-items:center;font-weight:600;color:var(--ink2)}
+.req .who{font-weight:500}
+.req .meta{font-size:14px;color:var(--ink2)}
+.req .act{display:flex;gap:8px;align-items:center}
+.req .act .btn{padding:9px 16px;font-size:14px}
+.pill{font-size:13px;padding:6px 12px;border-radius:999px;font-weight:500}
+.pill.ok{background:var(--ok-l);color:var(--ok)}.pill.no{background:var(--bone);color:var(--ink3)}
+.empty{padding:22px 0;color:var(--ink3);border-top:1px solid var(--line)}
+@media(max-width:620px){.req{grid-template-columns:auto 1fr}.req .act{grid-column:1/-1}}
+.new{animation:hl 2s ease}
+@keyframes hl{0%{background:var(--amber-l)}100%{background:transparent}}
+.cal-wrap{overflow-x:auto}
+.chart{display:grid;grid-template-columns:120px repeat(10,minmax(54px,1fr));min-width:680px;font-size:13px}
+.chart .hd{padding:6px 0 10px;text-align:center;color:var(--ink3)}
+.chart .hd b{display:block;color:var(--ink);font-weight:500;font-size:14px}
+.chart .hd.today b{color:var(--amber)}
+.chart .rm{padding:12px 8px 12px 0;border-top:1px solid var(--line);color:var(--ink2);white-space:nowrap}
+.chart .rm b{color:var(--ink);font-weight:500}
+.chart .cell{border-top:1px solid var(--line);border-left:1px solid #eeece5}
+.bk{margin:7px 3px;border-radius:7px;padding:6px 10px;font-size:12.5px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background:var(--bone2);color:var(--ink);align-self:center;z-index:1}
+.bk.web{background:var(--amber-l);color:#7a4f12}
+.bk.pend{background:transparent;border:1.5px dashed var(--amber);color:#7a4f12}
+.legend{display:flex;gap:18px;margin-top:14px;font-size:13px;color:var(--ink2);flex-wrap:wrap}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,40px);opacity:0;background:var(--ink);color:#fff;padding:12px 18px;border-radius:12px;font-size:14.5px;transition:all .35s;z-index:80;max-width:calc(100% - 32px)}
+.toast.on{transform:translate(-50%,0);opacity:1}
+
+/* includes */
+.inc{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.inc .card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:24px}
+.inc .card .eyebrow{display:block;margin-bottom:8px}
+.inc h3{font-size:19px;margin-bottom:12px}
+.inc ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.inc li{position:relative;padding-left:24px;color:var(--ink2);font-size:15px}
+.inc li::before{content:"";position:absolute;left:2px;top:7px;width:12px;height:7px;border-left:2px solid var(--amber);border-bottom:2px solid var(--amber);transform:rotate(-45deg)}
+@media(max-width:960px){.inc{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.inc{grid-template-columns:1fr}}
+.costs{margin-top:16px;background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.costs .h{padding:18px 24px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.costs .h b{font-weight:600}.costs .h span{color:var(--ink3);font-size:14px}
+.costs table{width:100%;border-collapse:collapse;font-size:15px}
+.costs td{padding:14px 24px;border-top:1px solid var(--line);vertical-align:top}
+.costs tr:first-child td{border-top:0}
+.costs td:first-child{font-weight:500;width:30%}
+.costs td:nth-child(2){color:var(--ink2)}
+.costs td:last-child{text-align:right;white-space:nowrap;font-weight:500}
+@media(max-width:620px){.costs td{display:block;width:auto!important;text-align:left!important;padding:4px 20px;border:0}.costs tr{display:block;padding:12px 0;border-top:1px solid var(--line)}.costs tr:first-child{border-top:0}}
+
+/* demo note */
+.demo-note{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;border:1px dashed var(--amber);border-radius:18px;padding:clamp(24px,4vw,48px);background:linear-gradient(180deg,#fffaf1,var(--paper))}
+.demo-note h2{font-size:clamp(26px,3.2vw,38px);margin:10px 0 14px;max-width:18ch}
+.demo-note p{color:var(--ink2)}
+.demo-list{list-style:none;display:flex;flex-direction:column}
+.demo-list li{padding:16px 0;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:2px}
+.demo-list li:first-child{border-top:0;padding-top:0}
+.demo-list b{font-weight:600}
+.demo-list span{color:var(--ink2);font-size:15px}
+@media(max-width:820px){.demo-note{grid-template-columns:1fr;gap:24px}}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;counter-reset:s}
+.steps div{border-top:1px solid var(--ink);padding-top:18px}
+.steps .eyebrow{display:block}
+.steps h3{font-size:18px;margin:8px 0 6px}
+.steps p{color:var(--ink2);font-size:15px}
+@media(max-width:860px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
+
+.cta{background:var(--ink);color:#fff;text-align:center}
+.cta h2{font-size:clamp(30px,4.4vw,52px);font-weight:400;max-width:18ch;margin:12px auto 0}
+.cta p{color:rgba(255,255,255,.7);max-width:520px;margin:16px auto 28px}
+.cta .acts{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.cta .btn-line{background:transparent;border-color:rgba(255,255,255,.3);color:#fff}
+footer{background:var(--ink);color:rgba(255,255,255,.55);font-size:13.5px;border-top:1px solid rgba(255,255,255,.1);padding:20px 0}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+/* drawer */
+.ov{position:fixed;inset:0;background:rgba(20,20,20,.45);opacity:0;pointer-events:none;transition:opacity .3s;z-index:50}
+.ov.on{opacity:1;pointer-events:auto}
+.dr{position:fixed;top:0;right:0;height:100%;width:min(500px,100%);background:var(--paper);z-index:60;transform:translateX(100%);transition:transform .4s cubic-bezier(.2,.8,.2,1);display:flex;flex-direction:column}
+.dr.on{transform:none}
+.dr-h{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;border-bottom:1px solid var(--line);font-weight:500}
+.dr-h .x{width:36px;height:36px;border-radius:50%;background:var(--bone);font-size:16px}
+.dr-b{flex:1;overflow-y:auto;padding:24px}
+.steps-mini{font-size:13px;color:var(--ink3);margin-bottom:6px}
+.dr h3{font-size:24px;margin-bottom:4px}
+.dr .sub{color:var(--ink2);font-size:14.5px;margin-bottom:18px}
+.rsel{display:flex;gap:8px;overflow-x:auto;margin-bottom:18px;padding-bottom:4px}
+.rsel button{flex:none;padding:8px 14px;border:1px solid var(--line);border-radius:999px;font-size:14px}
+.rsel button[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.cal-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;font-weight:500;text-transform:capitalize}
+.cal-h button{width:36px;height:36px;border-radius:50%;border:1px solid var(--line)}
+.cal-h button:disabled{opacity:.3;cursor:default}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:2px}
+.cal .w{font-size:12px;text-align:center;color:var(--ink3);padding:4px 0}
+.cal button{aspect-ratio:1;border-radius:50%;font-size:14.5px}
+.cal button:hover:not(:disabled){background:var(--bone)}
+.cal button:disabled{color:#c4c2bb;cursor:default}
+.cal button.full{text-decoration:line-through}
+.cal button.in{background:var(--amber-l);border-radius:0}
+.cal button.s,.cal button.e{background:var(--ink);color:#fff}
+.note{font-size:13px;color:var(--ink3);margin-top:8px}
+.sum{margin-top:18px;background:var(--bone);border-radius:12px;padding:14px 16px;font-size:14.5px}
+.sum div{display:flex;justify-content:space-between;padding:3px 0}
+.sum .t{border-top:1px solid var(--line);margin-top:8px;padding-top:10px;font-weight:600}
+.fld{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.fld label{font-size:13.5px;color:var(--ink2)}
+.fld input,.fld select,.fld textarea{padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:#fff;font-size:15px}
+.fld input:focus,.fld textarea:focus,.fld select:focus{outline:2px solid var(--amber);outline-offset:-1px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.err{color:#b3261e;font-size:13.5px;margin-bottom:10px;display:none}
+.dr-f{padding:16px 24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:12px}
+.dr-f .tot{font-size:13.5px;color:var(--ink3)}.dr-f .tot b{display:block;font-size:19px;font-weight:600;color:var(--ink)}
+.done{text-align:center;padding:24px 0}
+.done .ck{width:64px;height:64px;margin:0 auto 18px;border-radius:50%;background:var(--ok-l);display:grid;place-items:center}
+.code{display:inline-block;margin:12px 0 16px;padding:8px 16px;background:var(--bone);border-radius:8px;font-weight:600;letter-spacing:.12em}
+
+/* ---------- motion ---------- */
+:root{--ease:cubic-bezier(.22,.8,.24,1)}
+.rv{opacity:0;transform:translateY(22px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.rv.vis{opacity:1;transform:none}
+
+/* sticky nav */
+nav.top{position:fixed;top:var(--rb,34px);transition:background .45s var(--ease),color .45s,box-shadow .45s,backdrop-filter .45s}
+nav.top .wrap{transition:height .45s var(--ease)}
+nav.top.solid{top:0;background:rgba(251,250,247,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);color:var(--ink);box-shadow:0 1px 0 var(--line)}
+nav.top.solid .wrap{height:64px}
+nav.top.solid .btn{background:var(--ink);color:#fff}
+nav.top.hide{transform:translateY(-100%)}
+nav.top{transition:transform .5s var(--ease),background .45s var(--ease),color .45s,box-shadow .45s}
+nav.top ul a{position:relative}
+nav.top ul a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
+nav.top ul a:hover::after{transform:scaleX(1);transform-origin:left}
+
+/* hero intro */
+.hero .bg{scale:1.14;transition:none;animation:kb 2.8s var(--ease) forwards;will-change:transform}
+@keyframes kb{to{scale:1.02}}
+.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em;margin-bottom:-.08em}
+.hero h1 .w>span{display:inline-block;transform:translateY(105%);animation:up 1.1s var(--ease) forwards}
+@keyframes up{to{transform:none}}
+.hero .fade{opacity:0;transform:translateY(16px);animation:fin 1s var(--ease) forwards}
+@keyframes fin{to{opacity:1;transform:none}}
+.scroll-cue{position:absolute;z-index:2;right:var(--g);bottom:48px;width:1px;height:64px;background:rgba(255,255,255,.25);overflow:hidden}
+.scroll-cue::after{content:"";position:absolute;left:0;top:-40%;width:1px;height:40%;background:#fff;animation:cue 2.2s var(--ease) infinite}
+@keyframes cue{to{top:100%}}
+@media(max-width:760px){.scroll-cue{display:none}}
+
+/* staggered groups */
+.stg>*{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:calc(var(--i,0)*90ms)}
+.stg.vis>*{opacity:1;transform:none}
+
+/* image curtain reveal */
+.room .ph,.gal figure{clip-path:inset(100% 0 0 0);transition:clip-path 1.3s var(--ease);transition-delay:calc(var(--i,0)*110ms)}
+.stg.vis .room .ph,.stg.vis figure{clip-path:inset(0 0 0 0)}
+.room .ph img,.gal img{scale:1.18;transition:scale 1.6s var(--ease),transform .9s var(--ease);transition-delay:calc(var(--i,0)*110ms)}
+.stg.vis .room .ph img,.stg.vis .gal img,.gal.vis img{scale:1}
+.gal figure:hover img{transform:scale(1.05)}
+
+/* buttons */
+.btn .ar{display:inline-block;transition:transform .4s var(--ease)}
+.btn:hover .ar{transform:translateX(4px)}
+.btn-line{position:relative;overflow:hidden;isolation:isolate}
+.btn-line::before{content:"";position:absolute;inset:0;background:var(--ink);transform:translateY(101%);transition:transform .45s var(--ease);z-index:-1;border-radius:inherit}
+.btn-line:hover{color:#fff;border-color:var(--ink)}
+.btn-line:hover::before{transform:none}
+.cta .btn-line::before{background:#fff}.cta .btn-line:hover{color:var(--ink)}
+
+/* why icons */
+.why .ic{transition:transform .6s var(--ease),background .4s}
+.why>div:hover .ic{transform:rotate(-12deg) scale(1.1);background:var(--amber);color:#fff}
+
+/* steps line draw */
+.steps div{border-top:0;position:relative}
+.steps div::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform 1.2s var(--ease);transition-delay:calc(var(--i,0)*160ms + .2s)}
+.steps.vis div::before{transform:scaleX(1)}
+
+/* inc cards */
+.inc .card{transition:opacity .9s var(--ease) calc(var(--i,0)*90ms),transform .9s var(--ease) calc(var(--i,0)*90ms),box-shadow .4s,border-color .4s}
+.inc .card:hover{box-shadow:0 18px 40px -26px rgba(0,0,0,.35);border-color:#cfccc1}
+.inc li{opacity:0;transform:translateX(-8px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.inc.vis li{opacity:1;transform:none}
+.inc.vis li:nth-child(1){transition-delay:calc(var(--i,0)*90ms + .35s)}
+.inc.vis li:nth-child(2){transition-delay:calc(var(--i,0)*90ms + .45s)}
+.inc.vis li:nth-child(3){transition-delay:calc(var(--i,0)*90ms + .55s)}
+.inc.vis li:nth-child(4){transition-delay:calc(var(--i,0)*90ms + .65s)}
+.inc.vis li:nth-child(5){transition-delay:calc(var(--i,0)*90ms + .75s)}
+
+/* panel */
+.chart.anim .bk{animation:grow .9s var(--ease) both;animation-delay:calc(var(--r,0)*70ms + .1s)}
+@keyframes grow{from{clip-path:inset(0 100% 0 0 round 7px);opacity:.3}to{clip-path:inset(0 0 0 0 round 7px);opacity:1}}
+.req.new{animation:slide .7s var(--ease),hl 2.2s ease}
+@keyframes slide{from{opacity:0;transform:translateY(-12px)}}
+.pill{animation:pop .5s var(--ease)}
+@keyframes pop{from{transform:scale(.7);opacity:0}}
+[data-pane]:not([hidden]){animation:fin .5s var(--ease)}
+.tabs{position:relative}
+.dr-b>*{animation:fin .5s var(--ease) both}
+.dr-b>*:nth-child(2){animation-delay:.04s}.dr-b>*:nth-child(3){animation-delay:.08s}.dr-b>*:nth-child(4){animation-delay:.12s}.dr-b>*:nth-child(n+5){animation-delay:.16s}
+.done .ck svg path{stroke-dasharray:30;stroke-dashoffset:30;animation:draw .7s .25s var(--ease) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.done .ck{animation:pop .6s var(--ease)}
+.cal button{transition:background .2s,color .2s,transform .2s}
+.cal button:active:not(:disabled){transform:scale(.9)}
+
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}.rv,.stg>*,.inc li{opacity:1!important;transform:none!important}.room .ph,.gal figure{clip-path:none!important}.hero .bg,.room .ph img,.gal img{scale:1!important}.hero h1 .w>span,.hero .fade{transform:none;opacity:1}}
+</style>
+</head>
+<body>
+
+<div class="ribbon">
+  <div class="wrap">
+    <span><b>●</b> Demostración para Hostal Espinoza · fotos y precios de ejemplo · <a href="#demo" style="color:#fff">Ver qué cambia en la versión final</a></span>
+    <span class="sp">
+      <svg viewBox="0 0 602 363" aria-hidden="true"><path fill="#fff" d="M184 0h260l-60 73H180l-36 65 10 10-82 75-57-65L184 0z"/><path fill="#fff" d="M160 148h322l47 62-152 153H0l82-73h280l42-65H137l23-77z"/><path fill="#e9a23b" d="M482 0h120L500 101H384L482 0z"/></svg>
+      SPARTECH</span>
+  </div>
+</div>
+
+<nav class="top" aria-label="Principal">
+  <div class="wrap">
+    <a class="logo" href="#inicio">Espinoza<small>Hostal · Arequipa</small></a>
+    <ul>
+      <li><a href="#habitaciones">Habitaciones</a></li>
+      <li><a href="#arequipa">Arequipa</a></li>
+      <li><a href="#panel">Panel del hostal</a></li>
+      <li><a href="#incluye">Qué incluye</a></li>
+    </ul>
+    <button class="btn" data-open>Reservar</button>
+  </div>
+</nav>
+
+<header class="hero" id="inicio">
+  <div class="bg" role="img" aria-label="Arequipa con el volcán Misti al fondo"></div>
+  <div class="wrap in">
+    <h1 id="h1">Tu casa en la Ciudad Blanca</h1>
+    <p class="fade" style="animation-delay:.75s">Habitaciones cómodas y atención cercana en Arequipa. Reserva directo con nosotros en dos minutos.</p>
+    <div class="bar fade" style="animation-delay:.95s" role="group" aria-label="Buscar disponibilidad">
+      <button class="f" data-open><span>Llegada</span><strong id="bIn">Elegir fecha</strong></button>
+      <button class="f" data-open><span>Salida</span><strong id="bOut">Elegir fecha</strong></button>
+      <label class="f"><span>Huéspedes</span>
+        <select id="bGuests"><option>1 huésped</option><option selected>2 huéspedes</option><option>3 huéspedes</option><option>4 huéspedes</option></select>
+      </label>
+      <button class="btn btn-dark" data-open>Ver disponibilidad <span class="ar">→</span></button>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true"></div>
+</header>
+
+<section id="habitaciones">
+  <div class="wrap">
+    <div class="sh rv">
+      <div><span class="eyebrow">Habitaciones</span><h2>Descansa después de recorrer la ciudad</h2></div>
+      <p>Fotos, lo que incluye cada habitación y su precio por noche. Sin mensajes de ida y vuelta.</p>
+    </div>
+    <div class="rooms stg" id="rooms"></div>
+  </div>
+</section>
+
+<section class="white">
+  <div class="wrap">
+    <div class="sh rv">
+      <div><span class="eyebrow">Reserva directa</span><h2>Mejor para el huésped, mejor para el hostal</h2></div>
+      <p>Cada reserva directa es un huésped propio y sin comisión de intermediarios.</p>
+    </div>
+    <div class="why stg">
+      <div><span class="ic">✓</span><h3>Disponibilidad al día</h3><p>El calendario muestra solo las noches libres.</p></div>
+      <div><span class="ic">✓</span><h3>Confirmación por WhatsApp</h3><p>El hostal confirma y el huésped recibe su código.</p></div>
+      <div><span class="ic">✓</span><h3>Mejor precio en la web</h3><p>Un motivo para reservar aquí y no en otra plataforma.</p></div>
+      <div><span class="ic">✓</span><h3>Pensado para el celular</h3><p>Se reserva cómodo desde cualquier teléfono.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="arequipa">
+  <div class="wrap">
+    <div class="sh rv">
+      <div><span class="eyebrow">Arequipa</span><h2>Sillar, volcanes y buena comida</h2></div>
+      <p>Aquí irían las fotos reales del hostal y de lo que hay cerca.</p>
+    </div>
+    <div class="gal stg">
+      <figure><img loading="lazy" src="https://images.unsplash.com/photo-1771262632232-33d2b8b86adf?auto=format&fit=crop&w=1200&q=70" alt="Catedral de piedra blanca"><figcaption>Centro histórico</figcaption></figure>
+      <figure><img loading="lazy" src="https://images.unsplash.com/photo-1732966651345-dbef5eac3f09?auto=format&fit=crop&w=700&q=70" alt="Callejón con macetas"><figcaption>Calles de sillar</figcaption></figure>
+      <figure><img loading="lazy" src="https://images.unsplash.com/photo-1785099367591-4f56f80c587f?auto=format&fit=crop&w=700&q=70" alt="Patio con arcos y fuente"><figcaption>Patios coloniales</figcaption></figure>
+      <figure><img loading="lazy" src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=700&q=70" alt="Desayuno servido"><figcaption>Desayuno</figcaption></figure>
+      <figure><img loading="lazy" src="https://images.unsplash.com/photo-1573775163196-510a3ff32226?auto=format&fit=crop&w=700&q=70" alt="Plaza junto a una iglesia"><figcaption>Plazas y templos</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="white" id="panel">
+  <div class="wrap">
+    <div class="sh rv">
+      <div><span class="eyebrow">Panel del hostal</span><h2>Así manejan sus reservas</h2></div>
+      <p>Desde la compu o el celular, sin capacitación complicada. <b>Pruébelo:</b> haga una reserva arriba y aparecerá aquí.</p>
+    </div>
+    <div class="panel rv" id="panelBox">
+      <div class="p-top">
+        <div class="hi" id="pHello">Buenos días<small id="pDate"></small></div>
+        <div class="tabs" role="tablist">
+          <button role="tab" aria-selected="true" data-tab="req">Solicitudes<span class="n" id="nReq">2</span></button>
+          <button role="tab" aria-selected="false" data-tab="cal">Calendario</button>
+        </div>
+      </div>
+      <div class="p-body">
+        <div class="stats">
+          <div class="stat"><span>Habitaciones ocupadas hoy</span><b id="sOcc">4 <small>de 6</small></b></div>
+          <div class="stat"><span>Llegan hoy</span><b>2</b></div>
+          <div class="stat"><span>Salen hoy</span><b>1</b></div>
+        </div>
+        <div data-pane="req" class="list"><h4>Por confirmar</h4><div id="reqs"></div></div>
+        <div data-pane="cal" class="cal-wrap" hidden>
+          <div class="chart" id="chart"></div>
+          <div class="legend"><span><i style="background:var(--bone2)"></i>Confirmada</span><span><i style="background:var(--amber-l)"></i>Reservada en la web</span><span><i style="border:1.5px dashed var(--amber)"></i>Por confirmar</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="demo" class="white">
+  <div class="wrap">
+    <div class="demo-note rv">
+      <div>
+        <span class="eyebrow">Sobre esta demostración</span>
+        <h2>Esto es una muestra. La versión final será de ustedes.</h2>
+        <p>Hicimos esta página para que vean cómo podría funcionar su web con reservas. Las fotos, precios, habitaciones y reservas que aparecen son de ejemplo. El trabajo final tendrá más detalle y se construye con sus requerimientos específicos.</p>
+      </div>
+      <ul class="demo-list stg">
+        <li><b>Su contenido real</b><span>Fotos del hostal, habitaciones, tarifas por temporada, ubicación y reseñas.</span></li>
+        <li><b>Sus reglas</b><span>Horarios de check-in y check-out, política de cancelación, adelantos y formas de pago.</span></li>
+        <li><b>Su forma de trabajar</b><span>Quién confirma, cómo avisar a recepción y si conectar con Booking o Airbnb.</span></li>
+        <li><b>Lo que ustedes pidan</b><span>Traslados, tours, desayunos, idiomas o cualquier función extra que necesiten.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="incluye">
+  <div class="wrap">
+    <div class="sh rv">
+      <div><span class="eyebrow">Propuesta</span><h2>Qué incluye el proyecto</h2></div>
+      <p>Todo lo necesario para que el hostal reciba reservas directas. Ustedes no tienen que encargarse de nada técnico.</p>
+    </div>
+    <div class="inc stg">
+      <div class="card"><span class="eyebrow">01</span><h3>Imagen de marca</h3><ul>
+        <li>Logo renovado (o ajuste del actual)</li><li>Colores y tipografía del hostal</li><li>Retoque de sus fotos para la web</li><li>Plantillas para Facebook e Instagram</li></ul></div>
+      <div class="card"><span class="eyebrow">02</span><h3>Página web</h3><ul>
+        <li>Diseño a medida, como esta muestra</li><li>Habitaciones con fotos y precios</li><li>Galería, ubicación y mapa</li><li>Español e inglés</li><li>Rápida y adaptada al celular</li></ul></div>
+      <div class="card"><span class="eyebrow">03</span><h3>Sistema de reservas</h3><ul>
+        <li>Calendario de disponibilidad</li><li>Solicitud de reserva con código</li><li>Aviso al hostal por correo y WhatsApp</li><li>Bloqueo de fechas (Booking, mantenimiento)</li></ul></div>
+      <div class="card"><span class="eyebrow">04</span><h3>Panel del hostal</h3><ul>
+        <li>Confirmar o rechazar en un toque</li><li>Calendario por habitación</li><li>Lista de huéspedes y contactos</li><li>Usuarios para recepción</li></ul></div>
+      <div class="card"><span class="eyebrow">05</span><h3>Publicación y Google</h3><ul>
+        <li>Dominio propio (ej. hostalespinoza.com)</li><li>Hosting y certificado de seguridad</li><li>Correo profesional (reservas@…)</li><li>Ficha de Google Maps actualizada</li><li>Configuración básica para aparecer en Google</li></ul></div>
+      <div class="card"><span class="eyebrow">06</span><h3>Entrega y soporte</h3><ul>
+        <li>Capacitación por videollamada</li><li>Guía corta de uso</li><li>30 días de ajustes incluidos</li><li>Mantenimiento mensual opcional</li></ul></div>
+    </div>
+    <div class="costs rv">
+      <div class="h"><b>Costos de terceros</b><span>Se pagan a nombre del hostal; los gestionamos nosotros</span></div>
+      <table>
+        <tr><td>Dominio</td><td>Su dirección web, por ejemplo hostalespinoza.com</td><td>≈ 15 USD / año</td></tr>
+        <tr><td>Hosting y base de datos</td><td>Donde vive la web y se guardan las reservas. Plan inicial gratuito; si crece mucho, se amplía.</td><td>0 – 25 USD / mes</td></tr>
+        <tr><td>Correo profesional</td><td>Opcional: reservas@hostalespinoza.com</td><td>≈ 6 USD / mes</td></tr>
+        <tr><td>WhatsApp automático</td><td>Opcional: mensajes enviados solos al confirmar. Sin esto, el aviso se envía con un toque desde el panel.</td><td>Según uso</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="white" id="proceso">
+  <div class="wrap">
+    <div class="sh rv">
+      <div><span class="eyebrow">Cómo trabajamos</span><h2>Simple y sin sorpresas</h2></div>
+      <p>Ustedes ven cada avance y aprueban antes de seguir.</p>
+    </div>
+    <div class="steps stg">
+      <div><span class="eyebrow">Paso 1</span><h3>Conversamos</h3><p>15 minutos por WhatsApp o videollamada sobre habitaciones, precios y cómo reservan hoy.</p></div>
+      <div><span class="eyebrow">Paso 2</span><h3>Diseño</h3><p>Una muestra con sus fotos e información reales. Avanzamos solo si les gusta.</p></div>
+      <div><span class="eyebrow">Paso 3</span><h3>Construcción</h3><p>Web, reservas y panel, con avances semanales.</p></div>
+      <div><span class="eyebrow">Paso 4</span><h3>Lanzamiento</h3><p>Publicamos con su dominio, les enseñamos a usarlo y quedamos para ajustes.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap rv">
+    <span class="eyebrow">Siguiente paso</span>
+    <h2>¿Lo hacemos con sus fotos reales?</h2>
+    <p>Esta fue una demostración. Con sus habitaciones, precios, fotos y requerimientos preparamos la versión real de Hostal Espinoza, sin compromiso.</p>
+    <div class="acts">
+      <a class="btn btn-amber" href="https://wa.me/59169723391?text=Hola%20Mateo%2C%20vimos%20el%20demo%20de%20Hostal%20Espinoza" target="_blank" rel="noopener">Escribir por WhatsApp <span class="ar">→</span></a>
+      <a class="btn btn-line" href="mailto:mateovelascop19@gmail.com?subject=Demo%20Hostal%20Espinoza">Escribir por correo</a>
+      <a class="btn btn-line" href="https://jmateovelascoauza.github.io" target="_blank" rel="noopener">Ver portafolio</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Hostal Espinoza · Arequipa, Perú — demostración, no es el sitio oficial</span>
+    <span>Diseño y desarrollo: SPARTECH · Mateo Velasco · Fotos: Unsplash</span>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="ov" id="ov"></div>
+<aside class="dr" id="dr" role="dialog" aria-modal="true" aria-labelledby="drT" aria-hidden="true">
+  <div class="dr-h"><span id="drT">Reservar</span><button class="x" id="drX" aria-label="Cerrar">✕</button></div>
+  <div class="dr-b" id="drB"></div>
+  <div class="dr-f" id="drF"></div>
+</aside>
+
+<script>
+(function(){
+const ROOMS=[
+  {id:"ind",name:"Individual",cap:1,price:85,img:"photo-1629140727571-9b5c6f6267b4",feat:"Baño privado · Wifi · Agua caliente"},
+  {id:"mat",name:"Matrimonial",cap:2,price:120,img:"photo-1618773928121-c32242e63f39",feat:"Cama queen · Baño privado · Desayuno"},
+  {id:"fam",name:"Familiar",cap:4,price:190,img:"photo-1611892440504-42a792e24d32",feat:"Dos camas · Baño privado · Desayuno · TV"}
+];
+const MES=["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
+const MC=MES.map(m=>m.slice(0,3)),DS=["dom","lun","mar","mié","jue","vie","sáb"];
+const today=new Date();today.setHours(0,0,0,0);
+const addD=(d,n)=>{const x=new Date(d);x.setDate(x.getDate()+n);return x};
+const iso=d=>d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+const fmt=d=>d.getDate()+" "+MC[d.getMonth()];
+const money=n=>"S/ "+n.toLocaleString("es-PE");
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const diff=(a,b)=>Math.round((b-a)/864e5);
+
+/* physical rooms + bookings (relative to today) */
+const UNITS=[{n:"101",t:"ind"},{n:"102",t:"mat"},{n:"103",t:"mat"},{n:"201",t:"fam"},{n:"202",t:"mat"},{n:"203",t:"ind"}];
+const BK=[
+  {u:"101",s:-1,e:2,who:"J. Quispe",k:"conf"},{u:"102",s:0,e:3,who:"M. Rossi",k:"web"},{u:"103",s:-2,e:1,who:"P. Díaz",k:"conf"},
+  {u:"103",s:4,e:7,who:"Familia Torres",k:"conf"},{u:"201",s:0,e:4,who:"L. García",k:"conf"},{u:"202",s:2,e:5,who:"S. Müller",k:"web"},
+  {u:"203",s:5,e:9,who:"Carlos M.",k:"pend",req:0},{u:"101",s:6,e:8,who:"Anna K.",k:"pend",req:1},{u:"102",s:5,e:8,who:"R. Flores",k:"conf"}
+].map(b=>({...b,s:addD(today,b.s),e:addD(today,b.e)}));
+function unitFree(u,s,e){return !BK.some(b=>b.u===u&&b.k!=="no"&&b.s<e&&b.e>s)}
+function typeFree(t,s,e){return UNITS.filter(x=>x.t===t).find(x=>unitFree(x.n,s,e))}
+function nightFull(room,d){return !typeFree(room.id,d,addD(d,1))}
+
+/* rooms */
+const roomsEl=document.getElementById("rooms");
+ROOMS.forEach(r=>{
+  const a=document.createElement("article");a.className="room";
+  a.innerHTML=`<div class="ph"><img loading="lazy" src="https://images.unsplash.com/${r.img}?auto=format&fit=crop&w=900&q=70" alt="Habitación ${r.name}"></div>
+  <div class="bd"><div class="row"><h3>${r.name}</h3><span class="cap">${r.cap===1?"1 persona":r.cap===2?"2 personas":"Hasta "+r.cap+" personas"}</span></div>
+  <p class="feat">${r.feat}</p>
+  <div class="ft"><div class="price">${money(r.price)} <small>/ noche</small></div><button class="btn btn-line" data-open="${r.id}">Reservar</button></div></div>`;
+  roomsEl.appendChild(a);
+});
+
+/* booking drawer */
+const S={room:ROOMS[1],start:null,end:null,month:new Date(today.getFullYear(),today.getMonth(),1),step:1,name:"",phone:"",guests:2};
+const dr=document.getElementById("dr"),ov=document.getElementById("ov"),B=document.getElementById("drB"),F=document.getElementById("drF");
+let lastFocus=null;
+function open(id){lastFocus=document.activeElement;if(id)S.room=ROOMS.find(r=>r.id===id)||S.room;
+  S.guests=parseInt(document.getElementById("bGuests").value)||2;
+  if(S.step===3){S.step=1;S.start=S.end=null;S.name="";S.phone=""}
+  dr.classList.add("on");ov.classList.add("on");dr.setAttribute("aria-hidden","false");render();setTimeout(()=>document.getElementById("drX").focus(),50)}
+function close(){dr.classList.remove("on");ov.classList.remove("on");dr.setAttribute("aria-hidden","true");lastFocus&&lastFocus.focus()}
+document.addEventListener("click",e=>{const t=e.target.closest("[data-open]");if(t){e.preventDefault();open(t.dataset.open)}});
+ov.onclick=close;document.getElementById("drX").onclick=close;
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&dr.classList.contains("on"))close()});
+const nights=()=>S.start&&S.end?diff(S.start,S.end):0;
+
+function summary(){const n=nights();return `<div class="sum"><div><span>Habitación</span><span>${S.room.name}</span></div>
+  <div><span>Fechas</span><span>${S.start?fmt(S.start):"—"} → ${S.end?fmt(S.end):"—"}</span></div>
+  <div><span>${n} noche${n===1?"":"s"} × ${money(S.room.price)}</span><span>${money(n*S.room.price)}</span></div>
+  <div class="t"><span>Total</span><span>${money(n*S.room.price)}</span></div></div>`}
+
+function render(){
+  if(S.step===1){
+    const m=S.month,y=m.getFullYear(),mo=m.getMonth(),first=(new Date(y,mo,1).getDay()+6)%7,days=new Date(y,mo+1,0).getDate();
+    let c=["L","M","M","J","V","S","D"].map(d=>`<span class="w">${d}</span>`).join("");
+    for(let i=0;i<first;i++)c+="<span></span>";
+    for(let d=1;d<=days;d++){const dt=new Date(y,mo,d),past=dt<today,full=!past&&nightFull(S.room,dt);let k=full?"full":"";
+      if(S.start&&+dt===+S.start)k+=" s";if(S.end&&+dt===+S.end)k+=" e";if(S.start&&S.end&&dt>S.start&&dt<S.end)k+=" in";
+      c+=`<button data-d="${iso(dt)}" class="${k}" ${past||(full&&!(S.start&&!S.end&&dt>S.start))?"disabled":""} aria-label="${d} de ${MES[mo]}${full?", sin cupo":""}">${d}</button>`}
+    const canPrev=m>new Date(today.getFullYear(),today.getMonth(),1);
+    B.innerHTML=`<p class="steps-mini">Paso 1 de 2</p><h3>Elija sus fechas</h3><p class="sub">Toque el día de llegada y luego el de salida.</p>
+    <div class="rsel">${ROOMS.map(r=>`<button data-room="${r.id}" aria-pressed="${r===S.room}">${r.name}</button>`).join("")}</div>
+    <div class="cal-h"><button id="pv" ${canPrev?"":"disabled"} aria-label="Mes anterior">‹</button><span>${MES[mo]} ${y}</span><button id="nx" aria-label="Mes siguiente">›</button></div>
+    <div class="cal">${c}</div><p class="note">Los días tachados no tienen cupo para esta habitación.</p>
+    <p class="err" id="cErr">Hay noches sin cupo entre esas fechas. Pruebe con otras.</p>${summary()}`;
+    B.querySelectorAll("[data-room]").forEach(b=>b.onclick=()=>{S.room=ROOMS.find(r=>r.id===b.dataset.room);S.start=S.end=null;render()});
+    document.getElementById("pv").onclick=()=>{S.month=new Date(y,mo-1,1);render()};
+    document.getElementById("nx").onclick=()=>{S.month=new Date(y,mo+1,1);render()};
+    B.querySelectorAll(".cal button[data-d]").forEach(b=>b.onclick=()=>pick(new Date(b.dataset.d+"T00:00:00")));
+    const n=nights();
+    F.innerHTML=`<div class="tot">${n?n+" noche"+(n>1?"s":""):"Sin fechas"}<b>${n?money(n*S.room.price):"—"}</b></div><button class="btn btn-dark" id="n1" ${n?"":"disabled"}>Continuar</button>`;
+    document.getElementById("n1").onclick=()=>{S.step=2;render()};
+  }else if(S.step===2){
+    B.innerHTML=`<p class="steps-mini">Paso 2 de 2</p><h3>Sus datos</h3><p class="sub">Le confirmamos por WhatsApp.</p>
+    <div class="fld"><label for="fN">Nombre completo</label><input id="fN" autocomplete="name" value="${esc(S.name)}"></div>
+    <div class="two"><div class="fld"><label for="fP">WhatsApp</label><input id="fP" inputmode="tel" autocomplete="tel" value="${esc(S.phone)}" placeholder="+51"></div>
+    <div class="fld"><label for="fG">Huéspedes</label><select id="fG">${[1,2,3,4].filter(n=>n<=S.room.cap).map(n=>`<option ${n===Math.min(S.guests,S.room.cap)?"selected":""}>${n}</option>`).join("")}</select></div></div>
+    <div class="fld"><label for="fA">Hora aproximada de llegada</label><select id="fA"><option>Antes de las 13:00</option><option selected>Entre 13:00 y 18:00</option><option>Después de las 18:00</option></select></div>
+    <div class="fld"><label for="fM">Comentario (opcional)</label><textarea id="fM" rows="2"></textarea></div>
+    <p class="err" id="fErr">Escriba su nombre y un número de WhatsApp.</p>${summary()}`;
+    F.innerHTML=`<button class="btn btn-line" id="b2">Atrás</button><button class="btn btn-dark" id="n2">Enviar solicitud</button>`;
+    const save=()=>{S.name=document.getElementById("fN").value;S.phone=document.getElementById("fP").value;S.guests=+document.getElementById("fG").value};
+    document.getElementById("b2").onclick=()=>{save();S.step=1;render()};
+    document.getElementById("n2").onclick=()=>{save();if(S.name.trim().length<3||S.phone.replace(/\D/g,"").length<7){document.getElementById("fErr").style.display="block";return}
+      S.code="ESP-"+(1000+Math.floor(Math.random()*9000));S.step=3;render();addRequest()};
+    setTimeout(()=>document.getElementById("fN").focus(),80);
+  }else{
+    B.innerHTML=`<div class="done"><div class="ck"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3d7a52" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg></div>
+    <h3>¡Solicitud enviada!</h3><p class="sub" style="max-width:320px;margin:6px auto 0">Gracias, ${esc(S.name.trim().split(" ")[0])}. Le confirmaremos por WhatsApp en unos minutos. Su código:</p>
+    <div class="code">${S.code}</div>${summary()}
+    <p class="note" style="margin-top:16px">Es una muestra: baje al <b>Panel del hostal</b> para ver cómo les llega esta solicitud.</p></div>`;
+    F.innerHTML=`<button class="btn btn-line" id="b3">Cerrar</button><a class="btn btn-dark" href="#panel" id="g3">Ver en el panel</a>`;
+    document.getElementById("b3").onclick=close;document.getElementById("g3").onclick=close;
+  }
+}
+function pick(d){
+  if(!S.start||S.end||d<=S.start){if(nightFull(S.room,d))return;S.start=d;S.end=null}
+  else{let ok=true;for(let x=new Date(S.start);x<d;x=addD(x,1))if(nightFull(S.room,x))ok=false;
+    if(!ok){render();document.getElementById("cErr").style.display="block";return}S.end=d}
+  document.getElementById("bIn").textContent=S.start?fmt(S.start):"Elegir fecha";
+  document.getElementById("bOut").textContent=S.end?fmt(S.end):"Elegir fecha";render();
+}
+
+/* panel */
+const now=new Date();
+document.getElementById("pHello").firstChild.textContent=now.getHours()<12?"Buenos días":now.getHours()<19?"Buenas tardes":"Buenas noches";
+document.getElementById("pDate").textContent=DS[today.getDay()]+" "+today.getDate()+" de "+MES[today.getMonth()]+" · Hostal Espinoza";
+const REQ=[
+  {who:"Carlos M.",room:"Individual",s:addD(today,5),e:addD(today,9),g:1,src:"Web",bk:BK[6]},
+  {who:"Anna K.",room:"Individual",s:addD(today,6),e:addD(today,8),g:1,src:"Web",bk:BK[7]}
+];
+const reqEl=document.getElementById("reqs");
+function drawReqs(){
+  const pend=REQ.filter(r=>!r.st);
+  document.getElementById("nReq").textContent=pend.length;
+  document.getElementById("nReq").style.display=pend.length?"":"none";
+  reqEl.innerHTML=REQ.length?"":`<p class="empty">No hay solicitudes pendientes.</p>`;
+  REQ.forEach((r,i)=>{const el=document.createElement("div");el.className="req"+(r.isNew?" new":"");r.isNew=false;
+    const n=diff(r.s,r.e),tot=n*ROOMS.find(x=>x.name===r.room).price;
+    el.innerHTML=`<div class="av">${esc(r.who.trim()[0]||"?")}</div>
+    <div><div class="who">${esc(r.who)}</div><div class="meta">${r.room} · ${fmt(r.s)} al ${fmt(r.e)} · ${n} noche${n>1?"s":""} · ${r.g} huésp. · ${money(tot)}</div></div>
+    <div class="act">${r.st?`<span class="pill ${r.st}">${r.st==="ok"?"Confirmada":"Rechazada"}</span>`:`<button class="btn btn-line" data-i="${i}" data-a="no">Rechazar</button><button class="btn btn-dark" data-i="${i}" data-a="ok">Confirmar</button>`}</div>`;
+    reqEl.appendChild(el)});
+  reqEl.querySelectorAll("[data-i]").forEach(b=>b.onclick=()=>{const r=REQ[+b.dataset.i];r.st=b.dataset.a;
+    if(r.bk)r.bk.k=r.st==="ok"?"web":"no";drawReqs();drawChart();
+    toast(r.st==="ok"?`Listo. Se envió la confirmación por WhatsApp a ${r.who.split(" ")[0]}.`:`Solicitud rechazada. Se avisó a ${r.who.split(" ")[0]}.`)});
+}
+function addRequest(){
+  const u=typeFree(S.room.id,S.start,S.end);let bk=null;
+  if(u){bk={u:u.n,s:S.start,e:S.end,who:S.name.trim(),k:"pend"};BK.push(bk)}
+  REQ.unshift({who:S.name.trim(),room:S.room.name,s:S.start,e:S.end,g:S.guests,src:"Web",bk,isNew:true});
+  drawReqs();drawChart();
+}
+function drawChart(){
+  const el=document.getElementById("chart"),D=10;let h=`<div class="hd"></div>`;
+  for(let i=0;i<D;i++){const d=addD(today,i);h+=`<div class="hd${i===0?" today":""}">${DS[d.getDay()]}<b>${d.getDate()}</b></div>`}
+  UNITS.forEach((u,ri)=>{const row=ri+2,tn=ROOMS.find(r=>r.id===u.t).name;
+    h+=`<div class="rm" style="grid-row:${row}"><b>${u.n}</b> · ${tn}</div>`;
+    for(let i=0;i<D;i++)h+=`<div class="cell" style="grid-row:${row};grid-column:${i+2}"></div>`;
+    BK.filter(b=>b.u===u.n&&b.k!=="no").forEach(b=>{let s=Math.max(0,diff(today,b.s)),e=Math.min(D,diff(today,b.e));if(e<=s)return;
+      h+=`<div class="bk ${b.k==="web"?"web":b.k==="pend"?"pend":""}" style="grid-row:${row};grid-column:${s+2}/${e+2};--r:${ri}" title="${esc(b.who)}">${esc(b.who)}</div>`});
+  });
+  el.innerHTML=h;
+  const occ=UNITS.filter(u=>BK.some(b=>b.u===u.n&&b.k!=="no"&&b.k!=="pend"&&b.s<=today&&b.e>today)).length;
+  document.getElementById("sOcc").innerHTML=occ+" <small>de "+UNITS.length+"</small>";
+}
+drawReqs();drawChart();
+document.querySelectorAll(".tabs button").forEach(b=>b.onclick=()=>{
+  document.querySelectorAll(".tabs button").forEach(x=>x.setAttribute("aria-selected",x===b));
+  document.querySelectorAll("[data-pane]").forEach(p=>p.hidden=p.dataset.pane!==b.dataset.tab);
+  if(b.dataset.tab==="cal"){const c=document.getElementById("chart");c.classList.remove("anim");void c.offsetWidth;c.classList.add("anim")}});
+let tt;function toast(m){const t=document.getElementById("toast");t.textContent=m;t.classList.add("on");clearTimeout(tt);tt=setTimeout(()=>t.classList.remove("on"),3200)}
+
+/* ---- motion ---- */
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+// headline word by word
+const h1=document.getElementById("h1");
+h1.innerHTML=h1.textContent.trim().split(/\s+/).map((w,i)=>`<span class="w"><span style="animation-delay:${.25+i*.09}s">${w}</span></span>`).join(" ");
+// stagger indexes
+document.querySelectorAll(".stg").forEach(g=>[...g.children].forEach((c,i)=>c.style.setProperty("--i",i)));
+// reveal on scroll
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add("vis");io.unobserve(e.target);
+  if(e.target.id==="panelBox")countUp()}),{threshold:.12,rootMargin:"0px 0px -6% 0px"});
+document.querySelectorAll(".rv,.stg").forEach(el=>io.observe(el));
+// nav: solid after hero, hide on scroll down, show on scroll up; hero parallax
+const nav=document.querySelector("nav.top"),bg=document.querySelector(".hero .bg");let lastY=0,tick=false;
+const rb=document.querySelector(".ribbon");
+function onScroll(){const y=scrollY;nav.style.setProperty("--rb",Math.max(0,rb.offsetHeight-y)+"px");
+  nav.classList.toggle("solid",y>60);
+  nav.classList.toggle("hide",y>400&&y>lastY+2);
+  if(y<lastY-2)nav.classList.remove("hide");
+  if(!reduce&&y<innerHeight*1.2)bg.style.translate=`0 ${y*.28}px`;
+  lastY=y;tick=false}
+addEventListener("scroll",()=>{if(!tick){tick=true;requestAnimationFrame(onScroll)}},{passive:true});onScroll();
+// count-up stats
+function countUp(){document.querySelectorAll(".stat b").forEach(b=>{const node=b.firstChild,end=parseInt(node.textContent);if(isNaN(end)||reduce)return;
+  const t0=performance.now(),d=1100;(function f(t){const k=Math.min(1,(t-t0)/d),v=Math.round(end*(1-Math.pow(1-k,3)));node.textContent=v+(b.querySelector("small")?" ":"");if(k<1)requestAnimationFrame(f)})(t0)})}
+})();
+</script>
+</body>
+</html>
